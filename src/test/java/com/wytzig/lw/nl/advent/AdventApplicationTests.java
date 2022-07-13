@@ -8,14 +8,22 @@ import static org.junit.Assert.*;
 @SpringBootTest
 class AdventApplicationTests {
 
-    AdventApplication underTest = new AdventApplication();
+    final AdventApplication underTest = new AdventApplication();
+    Administrator administrator = new Administrator();
 
     @Test
     void contextLoads() {
     }
 
-    void dayTest() {
+//    @BeforeAll
+//    void setup() {
+//        underTest.run();
+//        administrator.init();
+//    }
 
-    }
+//    @Test
+//    void dayTest() {
+//        assertTrue(administrator.day_1());
+//    }
 
 }

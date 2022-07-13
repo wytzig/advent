@@ -16,10 +16,6 @@ public class AdventApplication {
 
     public void run() {
         Administrator administrator = new Administrator();
+        administrator.init();
     }
-
-    public boolean day_1() {
-        return true;
-    }
-
 }
