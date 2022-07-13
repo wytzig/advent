@@ -3,22 +3,23 @@ package com.wytzig.lw.nl.advent;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.List;
+
 @SpringBootApplication
 public class AdventApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AdventApplication.class, args);
         AdventApplication apl = new AdventApplication();
-        apl.Administrator();
+        apl.run();
     }
 
-    public void Administrator() {
-        System.out.println(welcomeText());
+    public void run() {
+        Administrator administrator = new Administrator();
     }
 
-    private String welcomeText() {
-        return ".....  Welcome traveler......" +
-                "you are most welcome. . . . . ";
+    public boolean day_1() {
+        return true;
     }
 
 }
