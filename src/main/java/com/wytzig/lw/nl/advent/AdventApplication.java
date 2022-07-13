@@ -16,6 +16,7 @@ public class AdventApplication {
 
     public void run() {
         Administrator administrator = new Administrator();
-        administrator.init();
+
+        System.out.println("The result of day 1 is: " + administrator.day_1());
     }
 }
