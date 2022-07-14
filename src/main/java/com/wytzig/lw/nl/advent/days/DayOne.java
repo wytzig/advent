@@ -44,7 +44,7 @@ public class DayOne implements Day{
         while (scanner.hasNextLine()) {
             totalCounter++;
             int line = scanner.nextInt();
-            System.out.println("line is: " + line);
+//            System.out.println("line is: " + line);
 
             if(prevLine != 0) {
                 if(isIncrease(prevLine, line)) {
@@ -53,7 +53,7 @@ public class DayOne implements Day{
             }
             prevLine = line;
         }
-        System.out.println("end-counter is: " + counter);
+//        System.out.println("end-counter is: " + counter);
         System.out.println("total-counter is: " + totalCounter);
         return counter;
     }
@@ -102,7 +102,7 @@ public class DayOne implements Day{
                 }
             }
         }
-        System.out.println("counter is: " + counter);
+        System.out.println("the answer of the example is: " + counter);
         return counter == answer;
     }
 
@@ -113,9 +113,10 @@ public class DayOne implements Day{
      *     (2,2) : : False
      *     (-1, -10) : : False
      */
-    private boolean isIncrease(int x, int y) {
-//        System.out.println("x: " + x + " is greater than y: " + y);
+    protected static boolean isIncrease(int x, int y) {
+        System.out.println("returning ??");
         if (y > x) return true;
+        System.out.println("x: " + x + " is greater than y: " + y + " so should return false");
         return false;
     }
 
