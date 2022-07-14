@@ -89,6 +89,11 @@ public class DayOne implements Day{
         return processIOFile();
     }
 
+    @Override
+    public List<String> computeFromText(File input) {
+        return null;
+    }
+
     public boolean getAnswerFromExample() {
         setDay1InputDataFromExample();
 
@@ -114,9 +119,9 @@ public class DayOne implements Day{
      *     (-1, -10) : : False
      */
     protected static boolean isIncrease(int x, int y) {
-        System.out.println("returning ??");
+//        System.out.println("returning ??");
         if (y > x) return true;
-        System.out.println("x: " + x + " is greater than y: " + y + " so should return false");
+//        System.out.println("x: " + x + " is greater than y: " + y + " so should return false");
         return false;
     }
 

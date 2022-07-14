@@ -48,7 +48,12 @@ public class DayOneTwo implements Day {
         return filteredInputListOfDepthMeasurements;
     }
 
-    private void computeFromInput(Scanner scanner) {
+    /**
+     * Creates filtered list based on next three sums from an scanner object
+     * @param scanner scanner put on the right file
+     * @return
+     */
+    private List<String> computeFromInput(Scanner scanner) {
         int amountOfDepbtMeasurements = 0;
 
         List<Integer> inputListOfDepthMeasurements = new LinkedList<>();
@@ -79,6 +84,7 @@ public class DayOneTwo implements Day {
         System.out.println("total amount of depth measurements [filtered] is: " + filteredInputListOfDepthMeasurements);
         System.out.println("total amount of filtered three-measures increased: " + amountOfIncreases);
 
+        return List.of("1","2"); //spoof for future compatibility
     }
 
     private int amountOfIncreasesForList(List<Integer> inputList) {
@@ -123,5 +129,19 @@ public class DayOneTwo implements Day {
     @Override
     public boolean getAnswerForQuestion() {
         return false;
+    }
+
+    @Override
+    public List<String> computeFromText(File input) {
+        try {
+            Scanner scanner = new Scanner(input);
+            System.out.println("scanner successfully started..");
+            return computeFromInput(scanner);
+
+        } catch (FileNotFoundException e) {
+            System.out.println("could not init scanner: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
     }
 }
