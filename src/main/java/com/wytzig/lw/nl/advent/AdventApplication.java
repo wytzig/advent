@@ -18,6 +18,7 @@ public class AdventApplication {
 
     public void run() {
         administrator = new Administrator();
-        administrator.day1();
+//        administrator.day1();
+        administrator.day3();
     }
 }

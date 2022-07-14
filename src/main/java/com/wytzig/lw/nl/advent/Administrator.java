@@ -31,9 +31,10 @@ public class Administrator {
         System.out.println("---- whoah! what a sunset. Take a rest sailor, you did well! -----");
     }
 
-    public void day2() {
+    public void day3() {
         System.out.println("------ Good morning sailor! Starting up the workday! ------");
         DayThree executable = new DayThree();
+        executable.getAnswerFromExample();
     }
 
 
