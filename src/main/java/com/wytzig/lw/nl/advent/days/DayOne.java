@@ -1,8 +1,25 @@
 package com.wytzig.lw.nl.advent.days;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Scanner;
 
+/***
+ * Day 1 was the start of the journey..
+ *
+ * We gave eachother one last clap on the shoulders before we'd lock ourselves up. On the pier the sun low in the sky.
+ * We stepped into the submarine. It was small, but it had all the capabilities.
+ *
+ * But once we've mustured 'deck, some hacker had deleted all our software!!
+ * We liked our own software anyway, as long as we can put enough time in.
+ *
+ * Whatever the costs..
+ * It would be a long journey.
+ *
+ * Matey's ahoy!
+ * ~ Your Captain - 2022
+ */
 public class DayOne implements Day{
 
     private static final List<Integer> day1_data_input_depth_measurement = List.
@@ -11,24 +28,69 @@ public class DayOne implements Day{
     private File day1Input = null;
     private List<Integer> depth_measurement = null;
 
+    // is asked by advent calender
     private void setDay1InputFromRemote() {
         // create java.File based on input from remote
         day1Input = null;
-        day1Input = new File("day_1_input.txt");;
-
-        // convert file to List<Integer>
-        // todo
+        day1Input = new File("C:\\PersonalProjects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\days\\IO\\day_1_input.txt");
     }
 
-    // used to verify
+    private int computeFromList(Scanner scanner) {
+        int counter = 0;
+        int prevLine  = 0;
+
+        int totalCounter = 0;
+
+        while (scanner.hasNextLine()) {
+            totalCounter++;
+            int line = scanner.nextInt();
+            System.out.println("line is: " + line);
+
+            if(prevLine != 0) {
+                if(isIncrease(prevLine, line)) {
+                    counter++;
+                }
+            }
+            prevLine = line;
+        }
+        System.out.println("end-counter is: " + counter);
+        System.out.println("total-counter is: " + totalCounter);
+        return counter;
+    }
+
+    /**
+     *
+     * @return
+     * @throws FileNotFoundException if file for scanner could not be found. (i.e. is null)
+     */
+    private boolean processIOFile() {
+        try {
+            Scanner scanner = new Scanner(this.day1Input);
+            System.out.println("scanner successfully started..");
+
+            System.out.println("the answer is: " + computeFromList(scanner));
+
+        } catch (FileNotFoundException e) {
+            System.out.println("could not init scanner: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    // used to verify if example result can be validated
     private void setDay1InputDataFromExample() {
         depth_measurement = null;
         depth_measurement = day1_data_input_depth_measurement;
     }
 
+    public boolean getAnswerForQuestion() {
+        setDay1InputFromRemote();
+
+        return processIOFile();
+    }
+
     public boolean getAnswerFromExample() {
         setDay1InputDataFromExample();
-        setDay1InputFromRemote();
 
         int counter = 0;
         int answer = 7;
@@ -52,7 +114,7 @@ public class DayOne implements Day{
      *     (-1, -10) : : False
      */
     private boolean isIncrease(int x, int y) {
-//        if(x == null) throw new InvalidListOperationException("first element of the list can't be compared to the previous one");
+//        System.out.println("x: " + x + " is greater than y: " + y);
         if (y > x) return true;
         return false;
     }

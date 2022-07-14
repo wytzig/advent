@@ -18,6 +18,6 @@ public class AdventApplication {
 
     public void run() {
         administrator = new Administrator();
-        System.out.println("The result of day 1 is: " + administrator.day1());
+        administrator.day1();
     }
 }
