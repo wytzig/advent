@@ -8,13 +8,26 @@ import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * Dear sailor,
+ * A challenge awaits us as we've just created an report with all diagnositics we could get from the DCC (diagnostic control cip)
+ * It consist of binary data i.e. [0011001, 11001110]
  *
+ * We quickly need to know the power-consumption. Calculated by multiplying gamma and epsilon
  *
  *
  *  1. The most common bit of the first bit is(2x (0) & 5x (1)) :: gamma=[1].
  *  2. The definition of a second most common bit is as the second bit is more comman i.e. ( (2x (0) & 5x (1)) :: gamma=[1, 1]).
  *  3. The definition of a 3rd, 4th and 5th common bit is the same as 1 & 2. This is adding to gamma[]
- *  4. gamma[5] is complete, for example should be:
+ *  4. gamma[5] is complete, for example should be: 10010
+ *
+ *  5. epsilon is the 0 or 1 that are the least common in the bitstring
+ *
+ *  -- lunch --
+ * Now that you're done we need the oxygen generator rating and the CO2 scrubber rating as well.
+ * If you do not get to it, we will know when the power goes out but not when we will suffocate.
+ *
+ * Please fix, we rely on you.
+ * Kind regards, your captain.
  *
  */
 public class DayThree implements Day {

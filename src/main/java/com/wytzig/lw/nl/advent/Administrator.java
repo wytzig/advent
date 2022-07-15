@@ -63,6 +63,12 @@ public class Administrator {
         System.out.println("---- ...........  -----");
         System.out.println("---- ...........  -----");
         System.out.println("---- ...........  -----");
+        System.out.println("---- Taking lunch for day 1.1, switching to 1.2 ------");
+
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
         System.out.println("---- Take a rest sailor, another day has passed -----");
 
     }
