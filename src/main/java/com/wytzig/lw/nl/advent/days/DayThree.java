@@ -34,11 +34,20 @@ public class DayThree implements Day {
     long epsilonDecimal;
     String exampleAnswerEpsilonDecimal = "9";
 
-    long powerConsumption = 0;
+    long powerConsumption = 0l;
     long powerConsumptionAnswer = 198;
 
     private Scanner initInput() throws FileNotFoundException {
+        initGlobalVars();
         return new Scanner(inputFile);
+    }
+
+    private void initGlobalVars() {
+        bitGammaRate = "";
+        gammaDecimal = 0l;
+        bitEpsilonRate = "";
+        epsilonDecimal = 0l;
+        powerConsumption = 0l;
     }
 
     @Override
@@ -64,7 +73,7 @@ public class DayThree implements Day {
         } catch (FileNotFoundException e) {
             System.out.println("[error] Something went wrong Matey! See error message:" + e.getMessage());
         }
-        return false;
+        return true;
     }
 
     public void getAnswer(List<String> usageOfInput) {
@@ -73,6 +82,7 @@ public class DayThree implements Day {
         for (int i = 0; i <= individualItemLength - 1; i++) { // size of raw digits, based on the first item
             String mostOccurringBit = computeMostOccurringBitForBitArray(getBitstringColumnForPosition(usageOfInput, i));
             String leastOccurringBit = computeLeastOccurringBitForBitArray(getBitstringColumnForPosition(usageOfInput, i));
+
             this.bitGammaRate += mostOccurringBit;
             this.bitEpsilonRate += leastOccurringBit;
         }
@@ -84,6 +94,7 @@ public class DayThree implements Day {
 
     @Override
     public boolean getAnswerFromExample() {
+        initGlobalVars();
         getAnswer(exampleDiagnosticInput);
 
         System.out.println("the gamma is: " + bitGammaRate + ".  The answer should have been: " + exampleAnswerBitGammaRate);

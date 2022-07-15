@@ -17,7 +17,11 @@ public class Administrator {
         executable.getAnswerFromExample();
         executable.getAnswerForQuestion();
 
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
         System.out.println("---- Taking lunch for day 1.1, switching to 1.2 ------");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
 
         DayOneTwo executable2 = new DayOneTwo();
         executable2.getAnswerFromExample();
@@ -48,7 +52,19 @@ public class Administrator {
         System.out.println("---- ...........  -----");
         System.out.println("---- well done captain, but can you put this on production pls?  -----");
         System.out.println("---- we need it asap!  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
         executable.getAnswerForQuestion();
+        System.out.println("---- The systems seem to be calibrating..  -----");
+        System.out.println("---- It works!  -----");
+        System.out.println("---- You mad-lad -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- Take a rest sailor, another day has passed -----");
+
     }
 
 
