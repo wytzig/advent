@@ -1,7 +1,6 @@
 package com.wytzig.lw.nl.advent.days.utills;
 
 import com.wytzig.lw.nl.advent.days.Day;
-import com.wytzig.lw.nl.advent.days.DayThree;
 
 import java.io.File;
 import java.io.FileNotFoundException;

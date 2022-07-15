@@ -53,7 +53,6 @@ public class DayOne implements Day{
             }
             prevLine = line;
         }
-//        System.out.println("end-counter is: " + counter);
         System.out.println("total-counter is: " + totalCounter);
         return counter;
     }
