@@ -132,6 +132,11 @@ public class DayOneTwo implements Day {
     }
 
     @Override
+    public String getClassName() {
+        return this.getClassName();
+    }
+
+    //    @Override
     public List<String> computeFromText(File input) {
         try {
             Scanner scanner = new Scanner(input);

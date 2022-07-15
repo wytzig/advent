@@ -90,9 +90,14 @@ public class DayOne implements Day{
     }
 
     @Override
-    public List<String> computeFromText(File input) {
-        return null;
+    public String getClassName() {
+        return this.getClassName();
     }
+
+//    @Override
+//    public List<String> computeFromText(File input) {
+//        return null;
+//    }
 
     public boolean getAnswerFromExample() {
         setDay1InputDataFromExample();

@@ -12,7 +12,7 @@ public class Administrator {
         System.out.println("---- ...........  -----");
         System.out.println("---- ...........  -----");
         System.out.println("---- ...........  -----");
-        System.out.println("------ Good morning sailor! Starting up the workday! ------");
+        System.out.println("------ Good morning sailor! Starting up the first workday! ------");
         DayOne executable = new DayOne();
         executable.getAnswerFromExample();
         executable.getAnswerForQuestion();
@@ -32,7 +32,7 @@ public class Administrator {
     }
 
     public void day3() {
-        System.out.println("------ Good morning sailor! Starting up the workday! ------");
+        System.out.println("------ Good morning sailor! Starting up the workday! It's the 3rd ------");
         DayThree executable = new DayThree();
         executable.getAnswerFromExample();
     }
