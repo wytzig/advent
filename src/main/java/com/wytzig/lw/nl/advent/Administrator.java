@@ -1,9 +1,9 @@
 package com.wytzig.lw.nl.advent;
 
 
-import com.wytzig.lw.nl.advent.days.DayOne;
-import com.wytzig.lw.nl.advent.days.DayOneTwo;
-import com.wytzig.lw.nl.advent.days.DayThree;
+import com.wytzig.lw.nl.advent.days.one.DayOne;
+import com.wytzig.lw.nl.advent.days.one.DayOneTwo;
+import com.wytzig.lw.nl.advent.days.three.DayThree;
 
 public class Administrator {
 

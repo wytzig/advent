@@ -1,4 +1,6 @@
-package com.wytzig.lw.nl.advent.days;
+package com.wytzig.lw.nl.advent.days.one;
+
+import com.wytzig.lw.nl.advent.days.Day;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,7 +22,7 @@ import java.util.Scanner;
  * Matey's ahoy!
  * ~ Your Captain - 2022
  */
-public class DayOne implements Day{
+public class DayOne implements Day {
 
     private static final List<Integer> day1_data_input_depth_measurement = List.
             of(199, 200, 208, 210, 200, 207, 240, 269, 260, 263);

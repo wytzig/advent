@@ -1,4 +1,6 @@
-package com.wytzig.lw.nl.advent.days;
+package com.wytzig.lw.nl.advent.days.one;
+
+import com.wytzig.lw.nl.advent.days.Day;
 
 import java.io.File;
 import java.io.FileNotFoundException;
