@@ -13,3 +13,11 @@ as well as provide a better (project) architecture which can be used in the futu
 
 Designed for and with microservice architecture in mind. 
 
+
+## TTD & TBD
+
+Project could/should work with TDD (Test Driven Development, preferably red, green and blue testing) and TBD (Trunk based developement). 
+  - TDD, will improve general workflow as you understand the end result first. 
+  - TBD, will allow for only a limited number of branches to commit from. Likewise, small commits on master should always be prefered. Old branches and features should be left forgotten or preferably just deleted outright. 
+  
+----end of file-----
