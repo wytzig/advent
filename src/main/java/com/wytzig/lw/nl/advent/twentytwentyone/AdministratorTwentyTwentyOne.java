@@ -17,6 +17,12 @@ public class AdministratorTwentyTwentyOne {
         System.out.println("---");
         System.out.println("---");
         System.out.println("---");
+        System.out.println("Getting answers from input-file.. commander: ");
+        day4.getAnswerForQuestion();
+
+        System.out.println("---");
+        System.out.println("---");
+        System.out.println("---");
         System.out.println("--- end of file");
 
     }

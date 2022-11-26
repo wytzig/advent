@@ -3,7 +3,7 @@ package com.wytzig.lw.nl.advent.twentytwentyone.bingo;
 import org.bouncycastle.asn1.esf.SPUserNotice;
 
 public class BingoCard {
-    private final String name;
+    public final String name;
 
     int[][] initalBingoCard = new int[5][5];
 
@@ -17,18 +17,40 @@ public class BingoCard {
         return initalBingoCard[row][column];
     }
 
+    public boolean callNumberCheckBingoAndReturnScore(int calledNumber) {
+        boolean result = callNumberAndCheckForBingo(calledNumber);
+        if(result) {
+            System.out.println("Score is: " + calculateScore(calledNumber));
+            System.out.println("--------------------- ");
+        }
+        return result;
+    }
+
     //call with a given next number
     //if the number is on the card, the number will be 'marked'.
     //if a full column or a full row is marked, then we have bingo
-    public boolean callNumberAndCheckForBingo(int calledNumber) {
-        System.out.println("-------------");
-        System.out.println("-------------");
-        System.out.println("call number: "+ calledNumber);
+    private boolean callNumberAndCheckForBingo(int calledNumber) {
+//        System.out.println("-------------");
+//        System.out.println("-------------");
+//        System.out.println("call number: "+ calledNumber);
         // check number and fill the marked card
         isPresentInCard(calledNumber);
 
         // check row's for bingo
         return checkForBingo();
+    }
+
+    // all unmarked numbers from the initial list is aggregated and returned as SUM
+    private int calculateScore(int lastCalledNumber) {
+        int result = 0;
+        for(int i = 0; i <5; i++) {
+            for(int j = 0; j<5; j++) {
+                if(markedCard[i][j] == false) {
+                    result += initalBingoCard[i][j];
+                }
+            }
+        }
+        return result * lastCalledNumber;
     }
 
     private boolean checkForBingo() {
@@ -75,9 +97,9 @@ public class BingoCard {
         for(int i = 0; i < 5; i++) { // every row
             for (int j = 0; j < 5; j++) { // every column
                 if(initalBingoCard[i][j] == calledNumber) {
-                    System.out.println("\ncalled number: " + calledNumber + " was present on" + this.name + " on pos: " + (i + 1) + ", " + (j + 1));
+//                    System.out.println("\ncalled number: " + calledNumber + " was present on" + this.name + " on pos: " + (i + 1) + ", " + (j + 1));
                     markedCard[i][j] = true;
-                    prettyPrintMarkedCard();
+//                    prettyPrintMarkedCard();
                     return true;
                 }
             }
@@ -86,7 +108,7 @@ public class BingoCard {
         return false;
     }
 
-    void initInitialBingoCard(int... numbers) {
+    void initInitialBingoCard(Integer... numbers) {
         int processed = 0;
         int rowPos = 0;
         int columnNumber = 0;
