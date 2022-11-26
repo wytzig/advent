@@ -133,11 +133,6 @@ public class DayOneTwo implements Day {
         return false;
     }
 
-    @Override
-    public String getClassName() {
-        return this.getClassName();
-    }
-
     //    @Override
     public List<String> computeFromText(File input) {
         try {

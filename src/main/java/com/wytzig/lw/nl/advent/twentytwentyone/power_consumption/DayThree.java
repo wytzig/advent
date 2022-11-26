@@ -181,9 +181,4 @@ public class DayThree implements Day {
         }
         return bitString;
     }
-
-    @Override
-    public String getClassName() {
-        return this.getClassName();
-    }
 }

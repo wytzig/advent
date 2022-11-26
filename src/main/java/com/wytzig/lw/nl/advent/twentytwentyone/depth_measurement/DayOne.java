@@ -90,16 +90,6 @@ public class DayOne implements Day {
         return processIOFile();
     }
 
-    @Override
-    public String getClassName() {
-        return this.getClassName();
-    }
-
-//    @Override
-//    public List<String> computeFromText(File input) {
-//        return null;
-//    }
-
     public boolean getAnswerFromExample() {
         setDay1InputDataFromExample();
 
