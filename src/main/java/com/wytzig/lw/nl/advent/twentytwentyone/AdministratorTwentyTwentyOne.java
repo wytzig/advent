@@ -1,11 +1,25 @@
 package com.wytzig.lw.nl.advent.twentytwentyone;
 
 
+import com.wytzig.lw.nl.advent.twentytwentyone.bingo.Day4;
 import com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement.DayOne;
 import com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement.DayOneTwo;
 import com.wytzig.lw.nl.advent.twentytwentyone.power_consumption.DayThree;
 
 public class AdministratorTwentyTwentyOne {
+
+    public void day4() {
+        System.out.println("---------- DAY 4 ------------------");
+        Day4 day4 = new Day4();
+        System.out.println("Getting answers from example.. commander: ");
+        day4.getAnswerFromExample();
+
+        System.out.println("---");
+        System.out.println("---");
+        System.out.println("---");
+        System.out.println("--- end of file");
+
+    }
 
     public void day1(){
 
