@@ -1,6 +1,6 @@
-package com.wytzig.lw.nl.advent.days.one;
+package com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement;
 
-import com.wytzig.lw.nl.advent.days.Day;
+import com.wytzig.lw.nl.advent.twentytwentyone.Day;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,7 +16,7 @@ import java.util.Scanner;
  * At certain moments we are at -5 and others -400. These are minor blips though, but we should account
  * for the half broken machinery our company has set us up.
  *
- * "Burak": machines broken, sky is dark. Soon we will all be dead.
+ * "Burak" diary: machines broken, sky is dark. Soon we will all be dead.
  */
 public class DayOneTwo implements Day {
 

@@ -1,15 +1,14 @@
 package com.wytzig.lw.nl.advent;
 
+import com.wytzig.lw.nl.advent.twentytwentyone.AdministratorTwentyTwentyOne;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.Assert.*;
 
 @SpringBootTest
 class AdventApplicationTests {
 
     final AdventApplication underTest = new AdventApplication();
-    Administrator administrator = new Administrator();
+    AdministratorTwentyTwentyOne administratorTwentyTwentyOne = new AdministratorTwentyTwentyOne();
 
     @Test
     void contextLoads() {

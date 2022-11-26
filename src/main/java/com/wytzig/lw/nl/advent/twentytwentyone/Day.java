@@ -1,4 +1,4 @@
-package com.wytzig.lw.nl.advent.days;
+package com.wytzig.lw.nl.advent.twentytwentyone;
 
 
 public interface Day {

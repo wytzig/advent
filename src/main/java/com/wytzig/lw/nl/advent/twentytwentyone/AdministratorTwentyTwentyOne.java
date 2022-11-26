@@ -1,11 +1,11 @@
-package com.wytzig.lw.nl.advent;
+package com.wytzig.lw.nl.advent.twentytwentyone;
 
 
-import com.wytzig.lw.nl.advent.days.one.DayOne;
-import com.wytzig.lw.nl.advent.days.one.DayOneTwo;
-import com.wytzig.lw.nl.advent.days.three.DayThree;
+import com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement.DayOne;
+import com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement.DayOneTwo;
+import com.wytzig.lw.nl.advent.twentytwentyone.power_consumption.DayThree;
 
-public class Administrator {
+public class AdministratorTwentyTwentyOne {
 
     public void day1(){
 
@@ -70,8 +70,5 @@ public class Administrator {
         System.out.println("---- ...........  -----");
         System.out.println("---- ...........  -----");
         System.out.println("---- Take a rest sailor, another day has passed -----");
-
     }
-
-
 }

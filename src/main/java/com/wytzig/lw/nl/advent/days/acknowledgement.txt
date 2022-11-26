@@ -1,1 +1,0 @@
-All code will inherrently look like or `resemble`/`reflect` the final goal, we can also call this structure.

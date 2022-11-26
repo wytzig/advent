@@ -1,6 +1,6 @@
-package com.wytzig.lw.nl.advent.days.three;
+package com.wytzig.lw.nl.advent.twentytwentyone.power_consumption;
 
-import com.wytzig.lw.nl.advent.days.Day;
+import com.wytzig.lw.nl.advent.twentytwentyone.Day;
 
 import java.io.File;
 import java.io.FileNotFoundException;

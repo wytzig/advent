@@ -1,6 +1,6 @@
-package com.wytzig.lw.nl.advent.days.one;
+package com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement;
 
-import com.wytzig.lw.nl.advent.days.Day;
+import com.wytzig.lw.nl.advent.twentytwentyone.Day;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -125,7 +125,6 @@ public class DayOne implements Day {
      *     (-1, -10) : : False
      */
     protected static boolean isIncrease(int x, int y) {
-//        System.out.println("returning ??");
         if (y > x) return true;
 //        System.out.println("x: " + x + " is greater than y: " + y + " so should return false");
         return false;

@@ -1,14 +1,13 @@
 package com.wytzig.lw.nl.advent;
 
+import com.wytzig.lw.nl.advent.twentytwentyone.AdministratorTwentyTwentyOne;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.List;
 
 @SpringBootApplication
 public class AdventApplication {
 
-    Administrator administrator;
+    AdministratorTwentyTwentyOne administratorTwentyTwentyOne;
 
     public static void main(String[] args) {
         SpringApplication.run(AdventApplication.class, args);
@@ -17,8 +16,12 @@ public class AdventApplication {
     }
 
     public void run() {
-        administrator = new Administrator();
-        administrator.day1();
-        administrator.day3();
+        TheYear2021();
+    }
+
+    public void TheYear2021() {
+        administratorTwentyTwentyOne = new AdministratorTwentyTwentyOne();
+        administratorTwentyTwentyOne.day1();
+        administratorTwentyTwentyOne.day3();
     }
 }
