@@ -1,10 +1,13 @@
 package com.wytzig.lw.nl.advent.twentytwentyone.bingo;
 
-import lombok.AllArgsConstructor;
-
 public class BingoCard {
+    private final String name;
 
-    public int[][] initalBingoCard = new int[5][5];
+    private int[][] initalBingoCard = new int[5][5];
+
+    public BingoCard(String name) {
+        this.name = name;
+    }
 
     public int getNumberForRowAndColumn(int row, int column) {
         return initalBingoCard[row][column];
@@ -26,6 +29,7 @@ public class BingoCard {
     }
 
     public void prettyPrintCard() {
+        System.out.println("Pretty print for card: " + name);
         for(int i = 0; i < 5; i++) { //every 5 items
             for (int j = 0; j < 5; j++) { //column
                 System.out.print(initalBingoCard[i][j] + " "); // print for column
