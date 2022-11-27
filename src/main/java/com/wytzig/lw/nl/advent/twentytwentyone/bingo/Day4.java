@@ -51,6 +51,12 @@ public class Day4 implements Day {
     public boolean getAnswerForQuestion() {
         setDay4InputFromRemote();
         initBingoCardsFromInputList();
+        for(int number: pulledBingoBallsFromQuestion) {
+            for(BingoCard card: question_bingoCards) {
+                if(card.callNumberCheckBingoAndReturnScore(number)) return true;
+            }
+        }
+        System.out.println("\n\n there was no bingo :(");
         return false;
     }
 
