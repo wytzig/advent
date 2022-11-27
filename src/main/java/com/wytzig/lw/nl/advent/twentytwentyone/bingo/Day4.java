@@ -62,6 +62,16 @@ public class Day4 implements Day {
         return false;
     }
 
+    @Override
+    public boolean getAnswersFromExamplePart2() {
+        return false;
+    }
+
+    @Override
+    public boolean getAnswersForQuestionPart2() {
+        return false;
+    }
+
     public boolean getAnswerPartTwoExample() {
         filled_bingo_cards = new ArrayList<>(); // flush just in case
         initBingoCardsFromExample();

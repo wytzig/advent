@@ -133,6 +133,16 @@ public class DayOneTwo implements Day {
         return false;
     }
 
+    @Override
+    public boolean getAnswersFromExamplePart2() {
+        return false;
+    }
+
+    @Override
+    public boolean getAnswersForQuestionPart2() {
+        return false;
+    }
+
     //    @Override
     public List<String> computeFromText(File input) {
         try {

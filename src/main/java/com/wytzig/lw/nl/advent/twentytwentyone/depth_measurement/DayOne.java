@@ -90,6 +90,16 @@ public class DayOne implements Day {
         return processIOFile();
     }
 
+    @Override
+    public boolean getAnswersFromExamplePart2() {
+        return false;
+    }
+
+    @Override
+    public boolean getAnswersForQuestionPart2() {
+        return false;
+    }
+
     public boolean getAnswerFromExample() {
         setDay1InputDataFromExample();
 

@@ -91,6 +91,16 @@ public class DayThree implements Day {
         return true;
     }
 
+    @Override
+    public boolean getAnswersFromExamplePart2() {
+        return false;
+    }
+
+    @Override
+    public boolean getAnswersForQuestionPart2() {
+        return false;
+    }
+
     public void getAnswer(List<String> usageOfInput) {
         int individualItemLength = usageOfInput.get(0).length();
         System.out.println("length of individual item is: " + individualItemLength);

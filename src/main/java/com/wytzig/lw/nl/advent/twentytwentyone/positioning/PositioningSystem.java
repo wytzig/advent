@@ -9,6 +9,8 @@ public class PositioningSystem {
     private int x;  // the horizontal position
     private int y;  // the depth
 
+    private int aim;
+
     private void forward(int amount) {
         assert amount >= 0;
         this.x += amount;
@@ -24,11 +26,28 @@ public class PositioningSystem {
         this.y-=amount;
     }
 
-    public void processOperation(Operations operation, Integer amount) {
+    public void processOperationSimpleOperation(Operations operation, Integer amount) {
         switch (operation) {
             case forward -> this.forward(amount);
             case down -> this.down(amount);
             case up -> this.up(amount);
+        }
+    }
+
+    public void processComplexOperation(Operations operation, Integer amount) {
+        switch (operation) {
+            case forward -> {
+                this.forward(amount);
+                this.y += (aim * amount);
+            }
+            case down -> {
+                this.down(amount);
+                this.aim += amount;
+            }
+            case up -> {
+                this.up(amount);
+                this.aim -= amount;
+            }
         }
     }
 
