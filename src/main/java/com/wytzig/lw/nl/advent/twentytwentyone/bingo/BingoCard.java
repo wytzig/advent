@@ -9,6 +9,8 @@ public class BingoCard {
 
     boolean[][] markedCard = new boolean[5][5];
 
+    int finalScore = -1; // multiplication of all positive numbers can never be negative
+
     public BingoCard(String name) {
         this.name = name;
     }
@@ -17,13 +19,22 @@ public class BingoCard {
         return initalBingoCard[row][column];
     }
 
+    // returns true if there is a bingo and sets the final score variable
     public boolean callNumberCheckBingoAndReturnScore(int calledNumber) {
-        boolean result = callNumberAndCheckForBingo(calledNumber);
-        if(result) {
-            System.out.println("Score is: " + calculateScore(calledNumber));
-            System.out.println("--------------------- ");
+        System.out.println("calling number: " + calledNumber);
+        if(this.finalScore == -1) { // no bingo yet
+            boolean result = callNumberAndCheckForBingo(calledNumber);
+            if(result) {
+                this.finalScore = calculateScore(calledNumber);
+                System.out.println("We have bingo for card: " + name);
+                System.out.println("Score is: " + finalScore);
+                System.out.print("last pulled number was: " + calledNumber);
+                System.out.println("--------------------- ");
+            }
+            return result;
+        } else { // there already was a bingo for this card
+            return true;
         }
-        return result;
     }
 
     //call with a given next number
@@ -35,6 +46,7 @@ public class BingoCard {
 //        System.out.println("call number: "+ calledNumber);
         // check number and fill the marked card
         isPresentInCard(calledNumber);
+        prettyPrintMarkedCard();
 
         // check row's for bingo
         return checkForBingo();
@@ -58,8 +70,10 @@ public class BingoCard {
         int columnSucces = 0;
         for(int i = 0; i < 5; i++) {
             for (int j = 0; j <5; j++) {
-                // check every row
-                if(markedCard[i][j] == true) rowSucces++;
+                // check every position
+                if(markedCard[i][j] == true) {
+                    rowSucces++;
+                }
                 if(rowSucces == 5) {
                     bingoPrint(rowSucces, columnSucces);
                     return true;
@@ -67,22 +81,29 @@ public class BingoCard {
             }
             // next column so reset row succes
             rowSucces = 0;
+        }
 
-            if(markedCard[i][0] == true) columnSucces++;
-            if(columnSucces == 5) {
-                bingoPrint(rowSucces, columnSucces);
-                return true;
+        for(int i = 0; i < 5; i++) {
+            for(int j = 0; j<5; j++) {
+                if(markedCard[j][i] == true) {
+                    columnSucces++;
+                }
+                if(columnSucces == 5) {
+                    bingoPrint(rowSucces, columnSucces);
+                    return true;
+                }
             }
+            columnSucces = 0;
         }
         // assert that row and column successes cannot be >5
         assert columnSucces <= 5;
+        System.out.println("rowsucces: " + rowSucces + " and columnSucces: " + columnSucces);
         return false;
     }
 
     private void bingoPrint(int rowSucces, int columnSucces) {
         System.out.println("rowsucces: " + rowSucces + " and columnSucces: " + columnSucces);
-        System.out.println("WE HAVE A BINGO!!!");
-        System.out.println("Card: " + this.name);
+        System.out.println("BINGO for card: " + this.name);
 
     }
 
@@ -97,7 +118,7 @@ public class BingoCard {
         for(int i = 0; i < 5; i++) { // every row
             for (int j = 0; j < 5; j++) { // every column
                 if(initalBingoCard[i][j] == calledNumber) {
-//                    System.out.println("\ncalled number: " + calledNumber + " was present on" + this.name + " on pos: " + (i + 1) + ", " + (j + 1));
+                    System.out.println("\ncalled number: " + calledNumber + " was present on" + this.name + " on pos: " + (i + 1) + ", " + (j + 1));
                     markedCard[i][j] = true;
 //                    prettyPrintMarkedCard();
                     return true;

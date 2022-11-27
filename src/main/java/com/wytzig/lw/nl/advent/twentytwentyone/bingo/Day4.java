@@ -32,6 +32,8 @@ public class Day4 implements Day {
 
     public List<BingoCard> question_bingoCards = new ArrayList<>();
 
+    public List<BingoCard> filled_bingo_cards = new ArrayList<>();
+
     @Override
     public boolean getAnswerFromExample() {
         initBingoCardsFromExample();
@@ -58,6 +60,60 @@ public class Day4 implements Day {
         }
         System.out.println("\n\n there was no bingo :(");
         return false;
+    }
+
+    public boolean getAnswerPartTwoExample() {
+        filled_bingo_cards = new ArrayList<>(); // flush just in case
+        initBingoCardsFromExample();
+        List<BingoCard> listOfBingoCards = new ArrayList<>(List.of(card1, card2, card3));
+        ArrayList<BingoCard> cardsToSkip = new ArrayList<>();
+
+        System.out.println("The amount of input numbers are: " + pulledBingoBallsFromExample.size());
+        System.out.println("The amount of bingo cards are: " + listOfBingoCards.size());
+        for(int number: pulledBingoBallsFromExample) { // process all numbers
+            for(BingoCard card: listOfBingoCards) { // for all known bingo cards
+                System.out.println("We have " + filled_bingo_cards.size() + " completed cards");
+                if(listOfBingoCards.size() != cardsToSkip.size()) { // only process new numbers as not every card has a bingo
+                    System.out.println("Because this is not the same as total cards (" + listOfBingoCards.size() + ") we have to keep running numbers");
+                    if(card.callNumberCheckBingoAndReturnScore(number) && !cardsToSkip.contains(card)) {
+                        filled_bingo_cards.add(card);
+                        cardsToSkip.add(card);
+                    }
+                } // else we skil processing the numbers, although the loop continues
+            }
+        }
+
+        BingoCard lastCard = filled_bingo_cards.get(filled_bingo_cards.size() - 1);
+        System.out.println("The amount of bingos were: " + filled_bingo_cards.size());
+        System.out.println("The last bingo was: " + lastCard.name);
+        System.out.println("And it's score would be: " + lastCard.finalScore);
+
+        return false; // no bingo :(
+    }
+
+    public boolean getAnswerPartTwo() {
+        question_bingoCards = new ArrayList<>(); // flush just in case
+        setDay4InputFromRemote();
+        initBingoCardsFromInputList();
+        List<BingoCard> listOfBingoCards = new ArrayList<>(question_bingoCards);
+        ArrayList<BingoCard> cardsToSkip = new ArrayList<>();
+        for(int number: pulledBingoBallsFromQuestion) {
+            for(BingoCard card: listOfBingoCards) {
+                if(listOfBingoCards.size() != cardsToSkip.size()) { // only process new numbers as not every card has a bingo
+                    if(card.callNumberCheckBingoAndReturnScore(number) && !cardsToSkip.contains(card)) {
+                        filled_bingo_cards.add(card);
+                        cardsToSkip.add(card);
+                    }
+                }
+            }
+        }
+        BingoCard lastCard = filled_bingo_cards.get(filled_bingo_cards.size() - 1);
+        System.out.println("The amount of inputCards were: " + question_bingoCards.size());
+        System.out.println("The amount of bingos were: " + filled_bingo_cards.size());
+        System.out.println("The last bingo was: " + lastCard.name);
+        System.out.println("And it's score would be: " + lastCard.finalScore);
+
+        return false; // no bingo :(
     }
 
     public void initBingoCardsFromInputList() {
@@ -150,5 +206,4 @@ public class Day4 implements Day {
         card3.prettyPrintInitialCard();
         System.out.println("---- Finished initializing ----");
     }
-
 }
