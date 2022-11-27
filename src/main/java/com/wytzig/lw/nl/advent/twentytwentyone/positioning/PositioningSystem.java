@@ -37,15 +37,13 @@ public class PositioningSystem {
     public void processComplexOperation(Operations operation, Integer amount) {
         switch (operation) {
             case forward -> {
-                this.forward(amount);
+                this.x += amount;
                 this.y += (aim * amount);
             }
             case down -> {
-                this.down(amount);
                 this.aim += amount;
             }
             case up -> {
-                this.up(amount);
                 this.aim -= amount;
             }
         }

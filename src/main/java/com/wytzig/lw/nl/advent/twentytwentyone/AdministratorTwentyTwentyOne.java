@@ -81,6 +81,19 @@ public class AdministratorTwentyTwentyOne {
         System.out.println("---- moving on to real data... -----");
 
         executable.getAnswerForQuestion();
+
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- moving on with part 2 -----");
+        System.out.println("---- doing tests-----");
+
+        executable.getAnswersFromExamplePart2();
+
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- moving on to real data-----");
+
+        executable.getAnswersForQuestionPart2();
     }
 
     public void day1(){
