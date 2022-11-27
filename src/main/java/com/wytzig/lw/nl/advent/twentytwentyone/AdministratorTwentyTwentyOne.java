@@ -4,6 +4,7 @@ package com.wytzig.lw.nl.advent.twentytwentyone;
 import com.wytzig.lw.nl.advent.twentytwentyone.bingo.Day4;
 import com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement.DayOne;
 import com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement.DayOneTwo;
+import com.wytzig.lw.nl.advent.twentytwentyone.positioning.DayTwo;
 import com.wytzig.lw.nl.advent.twentytwentyone.power_consumption.DayThree;
 
 public class AdministratorTwentyTwentyOne {
@@ -23,43 +24,13 @@ public class AdministratorTwentyTwentyOne {
         System.out.println("---");
         System.out.println("---");
         System.out.println("---");
-//        day4.getAnswerPartTwoExample();
+        day4.getAnswerPartTwoExample();
         day4.getAnswerPartTwo();
         System.out.println("---");
         System.out.println("---");
         System.out.println("---");
         System.out.println("--- end of file");
 
-    }
-
-    public void day1(){
-
-        System.out.println("------ Good morning sailor! Starting up the first workday! ------");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-
-        DayOne executable = new DayOne();
-        executable.getAnswerFromExample();
-        executable.getAnswerForQuestion();
-
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- Taking lunch for day 1.1, switching to 1.2 ------");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-
-        DayOneTwo executable2 = new DayOneTwo();
-        executable2.getAnswerFromExample();
-
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- ...........  -----");
-        System.out.println("---- whoah! what a sunset. Take a rest sailor, you did well! -----");
     }
 
     public void day3() {
@@ -95,5 +66,50 @@ public class AdministratorTwentyTwentyOne {
         System.out.println("---- ...........  -----");
         System.out.println("---- ...........  -----");
         System.out.println("---- Take a rest sailor, another day has passed -----");
+    }
+
+    public void day2() {
+        System.out.println("------ Good morning sailor! Starting up the second workday! ------");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- doing tests...  -----");
+
+        DayTwo executable = new DayTwo();
+        executable.getAnswerFromExample();
+
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- moving on to real data... -----");
+
+        executable.getAnswerForQuestion();
+    }
+
+    public void day1(){
+
+        System.out.println("------ Good morning sailor! Starting up the first workday! ------");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+
+        DayOne executable = new DayOne();
+        executable.getAnswerFromExample();
+        executable.getAnswerForQuestion();
+
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- Taking lunch for day 1.1, switching to 1.2 ------");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+
+        DayOneTwo executable2 = new DayOneTwo();
+        executable2.getAnswerFromExample();
+
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- ...........  -----");
+        System.out.println("---- whoah! what a sunset. Take a rest sailor, you did well! -----");
     }
 }
