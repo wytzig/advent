@@ -37,7 +37,7 @@ public class DayThree implements Day {
     private List<String> exampleDiagnosticInput = List.of("00100", "11110", "10110", "10111", "101001",
     "01111", "00111", "11100","10000","11001", "00010","01010");
 
-    private File inputFile = new File("C:\\PersonalProjects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\days\\IO\\day3_input.txt");
+    private File inputFile = new File("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentyone\\input_files\\day3_input.txt");
 
     String bitGammaRate = "";
     String exampleAnswerBitGammaRate = "10110";

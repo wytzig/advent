@@ -72,9 +72,7 @@ public class Day4 implements Day {
         System.out.println("The amount of bingo cards are: " + listOfBingoCards.size());
         for(int number: pulledBingoBallsFromExample) { // process all numbers
             for(BingoCard card: listOfBingoCards) { // for all known bingo cards
-                System.out.println("We have " + filled_bingo_cards.size() + " completed cards");
                 if(listOfBingoCards.size() != cardsToSkip.size()) { // only process new numbers as not every card has a bingo
-                    System.out.println("Because this is not the same as total cards (" + listOfBingoCards.size() + ") we have to keep running numbers");
                     if(card.callNumberCheckBingoAndReturnScore(number) && !cardsToSkip.contains(card)) {
                         filled_bingo_cards.add(card);
                         cardsToSkip.add(card);

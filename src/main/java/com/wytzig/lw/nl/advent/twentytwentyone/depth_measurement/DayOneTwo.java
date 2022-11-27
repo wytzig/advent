@@ -107,7 +107,7 @@ public class DayOneTwo implements Day {
     private void setDay1InputFromRemote() {
         // create java.File based on input from remote
         day1Input = null;
-        day1Input = new File("C:\\PersonalProjects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\days\\IO\\day_1_input.txt");
+        day1Input = new File("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentyone\\input_files\\day_1_input.txt");
     }
 
     /**

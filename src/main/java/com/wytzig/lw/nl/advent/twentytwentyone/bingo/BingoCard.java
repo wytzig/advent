@@ -1,7 +1,5 @@
 package com.wytzig.lw.nl.advent.twentytwentyone.bingo;
 
-import org.bouncycastle.asn1.esf.SPUserNotice;
-
 public class BingoCard {
     public final String name;
 
@@ -21,15 +19,13 @@ public class BingoCard {
 
     // returns true if there is a bingo and sets the final score variable
     public boolean callNumberCheckBingoAndReturnScore(int calledNumber) {
-        System.out.println("calling number: " + calledNumber);
         if(this.finalScore == -1) { // no bingo yet
             boolean result = callNumberAndCheckForBingo(calledNumber);
             if(result) {
                 this.finalScore = calculateScore(calledNumber);
                 System.out.println("We have bingo for card: " + name);
-                System.out.println("Score is: " + finalScore);
-                System.out.print("last pulled number was: " + calledNumber);
-                System.out.println("--------------------- ");
+//                System.out.println("Score is: " + finalScore);
+//                System.out.print("last pulled number was: " + calledNumber);
             }
             return result;
         } else { // there already was a bingo for this card
@@ -41,12 +37,8 @@ public class BingoCard {
     //if the number is on the card, the number will be 'marked'.
     //if a full column or a full row is marked, then we have bingo
     private boolean callNumberAndCheckForBingo(int calledNumber) {
-//        System.out.println("-------------");
-//        System.out.println("-------------");
-//        System.out.println("call number: "+ calledNumber);
         // check number and fill the marked card
         isPresentInCard(calledNumber);
-        prettyPrintMarkedCard();
 
         // check row's for bingo
         return checkForBingo();
@@ -75,7 +67,6 @@ public class BingoCard {
                     rowSucces++;
                 }
                 if(rowSucces == 5) {
-                    bingoPrint(rowSucces, columnSucces);
                     return true;
                 }
             }
@@ -89,7 +80,6 @@ public class BingoCard {
                     columnSucces++;
                 }
                 if(columnSucces == 5) {
-                    bingoPrint(rowSucces, columnSucces);
                     return true;
                 }
             }
@@ -97,16 +87,8 @@ public class BingoCard {
         }
         // assert that row and column successes cannot be >5
         assert columnSucces <= 5;
-        System.out.println("rowsucces: " + rowSucces + " and columnSucces: " + columnSucces);
         return false;
     }
-
-    private void bingoPrint(int rowSucces, int columnSucces) {
-        System.out.println("rowsucces: " + rowSucces + " and columnSucces: " + columnSucces);
-        System.out.println("BINGO for card: " + this.name);
-
-    }
-
 
     /**
      * Also sets a true flag in the markedBingoCard list on the pos (x,y) that if found
@@ -118,14 +100,11 @@ public class BingoCard {
         for(int i = 0; i < 5; i++) { // every row
             for (int j = 0; j < 5; j++) { // every column
                 if(initalBingoCard[i][j] == calledNumber) {
-                    System.out.println("\ncalled number: " + calledNumber + " was present on" + this.name + " on pos: " + (i + 1) + ", " + (j + 1));
                     markedCard[i][j] = true;
-//                    prettyPrintMarkedCard();
                     return true;
                 }
             }
         }
-        System.out.println("called number: " + calledNumber + " was not present on card " + this.name);
         return false;
     }
 

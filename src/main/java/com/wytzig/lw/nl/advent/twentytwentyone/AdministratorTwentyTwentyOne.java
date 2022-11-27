@@ -12,19 +12,19 @@ public class AdministratorTwentyTwentyOne {
         System.out.println("---------- DAY 4 ------------------");
         Day4 day4 = new Day4();
         System.out.println("Getting answers from example.. commander: ");
-//        day4.getAnswerFromExample();
+        day4.getAnswerFromExample();
 
         System.out.println("---");
         System.out.println("---");
         System.out.println("---");
         System.out.println("Getting answers from input-file.. commander: ");
-//        day4.getAnswerForQuestion();
+        day4.getAnswerForQuestion();
 
         System.out.println("---");
         System.out.println("---");
         System.out.println("---");
-        day4.getAnswerPartTwo();
 //        day4.getAnswerPartTwoExample();
+        day4.getAnswerPartTwo();
         System.out.println("---");
         System.out.println("---");
         System.out.println("---");
