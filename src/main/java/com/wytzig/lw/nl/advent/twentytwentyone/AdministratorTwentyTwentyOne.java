@@ -4,10 +4,20 @@ package com.wytzig.lw.nl.advent.twentytwentyone;
 import com.wytzig.lw.nl.advent.twentytwentyone.bingo.Day4;
 import com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement.DayOne;
 import com.wytzig.lw.nl.advent.twentytwentyone.depth_measurement.DayOneTwo;
+import com.wytzig.lw.nl.advent.twentytwentyone.lanternfish.DaySix;
 import com.wytzig.lw.nl.advent.twentytwentyone.positioning.DayTwo;
 import com.wytzig.lw.nl.advent.twentytwentyone.power_consumption.DayThree;
 
 public class AdministratorTwentyTwentyOne {
+
+    public void day6() {
+        DaySix executable = new DaySix();
+
+        executable.getAnswerFromExample();
+        executable.getAnswerForQuestion();
+        executable.getAnswersFromExamplePart2();
+        executable.getAnswersForQuestionPart2();
+    }
 
     public void day4() {
         System.out.println("---------- DAY 4 ------------------");
