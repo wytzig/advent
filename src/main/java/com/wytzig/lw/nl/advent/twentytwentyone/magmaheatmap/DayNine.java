@@ -11,14 +11,17 @@ import java.util.Scanner;
 public class DayNine implements Day {
 
     private List<String> heatmapRows = new ArrayList<>();
-    private long[][] heatmap;
+    private long[][] heatmap = null;
 
     private List<Long> listOfLowPoints = new ArrayList<>();
 
-    /**
-     * Converts input file to rows in @param heatmapRows
-     * @param pathToInputFile
-     */
+    private void deepClean() {
+        this.heatmapRows = new ArrayList<>();
+        this.heatmap = null;
+        this.listOfLowPoints = new ArrayList<>();
+    }
+
+    /** Converts input file to rows in @param heatmapRows */
     private void initInputForInputFile(String pathToInputFile) {
         File file = new File(pathToInputFile);
         try {
@@ -33,6 +36,7 @@ public class DayNine implements Day {
         }
     }
 
+    /** Make a heatmap based on the initialized heatmapRows */
     private void processHeatMapRows() {
         this.heatmap = new long[heatmapRows.size()][heatmapRows.stream().findFirst().get().length()];
         for(int i = 0; i < heatmapRows.size(); i++) { // iterate over all heatmapRows elements
@@ -121,6 +125,11 @@ public class DayNine implements Day {
 
     @Override
     public boolean getAnswerForQuestion() {
+        deepClean();
+        initInputForInputFile("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentyone\\input_files\\day9_question_input.txt");
+        processHeatMapRows();
+        determineLowPoints();
+        caluculateRiskFromLowPoints();
         return false;
     }
 

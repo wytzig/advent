@@ -15,6 +15,9 @@ public class AdministratorTwentyTwentyOne {
     public void day9() {
         DayNine executable = new DayNine();
         executable.getAnswerFromExample();
+        executable.getAnswerForQuestion();
+        executable.getAnswersFromExamplePart2();
+        executable.getAnswersForQuestionPart2();
     }
 
     public void day7() {
