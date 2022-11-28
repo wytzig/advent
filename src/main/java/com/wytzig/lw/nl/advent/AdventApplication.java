@@ -27,6 +27,7 @@ public class AdventApplication {
 //        administratorTwentyTwentyOne.day4();
 
 //        administratorTwentyTwentyOne.day6();
-        administratorTwentyTwentyOne.day7();
+//        administratorTwentyTwentyOne.day7();
+        administratorTwentyTwentyOne.day9();
     }
 }
