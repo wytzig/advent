@@ -103,6 +103,69 @@ public class DayNine implements Day {
             System.out.println("\n");
         }
     }
+    private List<Long> basins = new ArrayList<>();
+    long basin = 0;
+
+    private void createBasing(long lowpoint, int i, int j) {
+        basin += 1;
+        // check nodes
+        checkNodeForValidSlope(lowpoint, i, j);
+
+        // add and flush basin to basins
+        basins.add(lowpoint);
+    }
+
+    private void checkNodeForValidSlope(long rootNode, int i, int j) {
+        // base case, stop recursion
+        if(rootNode == 9 || rootNode == -1) { // if 9 or an outofbounds, don't check any further
+            return;
+        }
+
+        long left = getLocation(Positions.LEFT, i, j);
+        long right = getLocation(Positions.RIGHT, i, j);
+        long upper = getLocation(Positions.UP, i, j);
+        long under = getLocation(Positions.DOWN, i, j);
+
+        if(left == (rootNode) + 1) {
+            basin += 1; // add left node to the basin
+            checkNodeForValidSlope(left, i , j - 1); // recursive for this node
+        }
+        if (right == (rootNode +1)) {
+            basin += 1; // add right node to the basin
+            checkNodeForValidSlope(right, i, j + 1);
+        }
+        if(upper == (rootNode + 1)) {
+            basin += 1;
+            checkNodeForValidSlope(upper, i - 1, j);
+        }
+        if(under == (rootNode + 1)) {
+            basin += 1;
+            checkNodeForValidSlope(under, i + 1, j);
+        }
+    }
+
+    private void determineBasin() {
+        for(int i = 0; i < this.heatmap.length; i++) { // for all columns
+            assert this.heatmap.length == this.heatmapRows.size();
+            assert Arrays.stream(this.heatmap).findAny().get().length == this.heatmapRows.stream().findAny().get().length();
+            for(int j = 0; j < Arrays.stream(this.heatmap).findAny().get().length; j++) { // for every element in the row
+                long location = this.heatmap[i][j];
+
+                long left = getLocation(Positions.LEFT, i, j);
+                long right = getLocation(Positions.RIGHT, i, j);
+                long upper = getLocation(Positions.UP, i, j);
+                long under = getLocation(Positions.DOWN, i, j);
+
+                if(isLower(location, left) && isLower(location, right) && isLower(location, upper) && isLower(location, under)) {
+                    System.out.println("low point detected: " + location);
+                    createBasing(location, i, j);
+                }
+
+                System.out.println("the current number is: " + location + ". left: " + left + ". right: " + right + ". up: " + upper + ". under: "+ under);
+            }
+            System.out.println("\n");
+        }
+    }
 
     public long caluculateRiskFromLowPoints() {
         long sum = 0;
