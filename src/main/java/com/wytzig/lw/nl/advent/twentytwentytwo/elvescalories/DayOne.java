@@ -116,4 +116,17 @@ public class DayOne implements Day {
         System.out.println("Top three calorie sacks combined equals: " + sumTopThree());
         return false;
     }
+
+    public void hargosInput() {
+        deepclean();
+        parseInput("C:\\Projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day1_puzzle_input_hargo");
+        getSums();
+        System.out.println("The highest sum was: " + getHighest());
+
+        deepclean();
+        parseInput("C:\\Projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day1_puzzle_input_hargo");
+        getSums();
+        sortList();
+        System.out.println("Top three calorie sacks combined equals: " + sumTopThree());
+    }
 }

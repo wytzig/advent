@@ -6,10 +6,11 @@ public class AdministratorTwentyTwentyTwo {
 
     public void day1() {
         DayOne executable = new DayOne();
-//        executable.getAnswerFromExample();
+        executable.getAnswerFromExample();
         executable.getAnswerForQuestion();
-//        executable.getAnswersFromExamplePart2();
+        executable.getAnswersFromExamplePart2();
         executable.getAnswersForQuestionPart2();
+        executable.hargosInput();
     }
 
 }
