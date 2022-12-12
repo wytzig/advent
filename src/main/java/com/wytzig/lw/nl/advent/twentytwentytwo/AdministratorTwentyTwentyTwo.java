@@ -9,6 +9,8 @@ public class AdministratorTwentyTwentyTwo {
         DayTwo executable = new DayTwo();
         executable.getAnswerFromExample();
         executable.getAnswerForQuestion();
+        executable.getAnswersFromExamplePart2();
+        executable.getAnswersForQuestionPart2();
     }
     public void day1() {
         DayOne executable = new DayOne();
