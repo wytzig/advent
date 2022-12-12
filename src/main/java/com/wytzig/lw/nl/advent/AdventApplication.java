@@ -25,7 +25,8 @@ public class AdventApplication {
     public void TheYear2022() {
         this.administratorTwentyTwentyTwo = new AdministratorTwentyTwentyTwo();
 //        administratorTwentyTwentyTwo.day1();
-        administratorTwentyTwentyTwo.day2();
+//        administratorTwentyTwentyTwo.day2();
+        administratorTwentyTwentyTwo.day3();
     }
 
     public void TheYear2021() {
