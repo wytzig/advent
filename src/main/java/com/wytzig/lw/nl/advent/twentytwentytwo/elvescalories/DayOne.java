@@ -44,6 +44,7 @@ public class DayOne implements Day {
             }
             sums.add(sum);
         }
+
     }
 
     private void parseInput(String inputFileLocation) {
