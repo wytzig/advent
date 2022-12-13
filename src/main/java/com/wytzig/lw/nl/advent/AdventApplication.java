@@ -26,18 +26,19 @@ public class AdventApplication {
         this.administratorTwentyTwentyTwo = new AdministratorTwentyTwentyTwo();
 //        administratorTwentyTwentyTwo.day1();
 //        administratorTwentyTwentyTwo.day2();
-        administratorTwentyTwentyTwo.day3();
+//        administratorTwentyTwentyTwo.day3();
+        administratorTwentyTwentyTwo.day4();
     }
 
     public void TheYear2021() {
-//        administratorTwentyTwentyOne = new AdministratorTwentyTwentyOne();
-//        administratorTwentyTwentyOne.day1();
-//        administratorTwentyTwentyOne.day2();
-//        administratorTwentyTwentyOne.day3();
-//        administratorTwentyTwentyOne.day4();
-//
-//        administratorTwentyTwentyOne.day6();
-//        administratorTwentyTwentyOne.day7();
-//        administratorTwentyTwentyOne.day9();
+        administratorTwentyTwentyOne = new AdministratorTwentyTwentyOne();
+        administratorTwentyTwentyOne.day1();
+        administratorTwentyTwentyOne.day2();
+        administratorTwentyTwentyOne.day3();
+        administratorTwentyTwentyOne.day4();
+
+        administratorTwentyTwentyOne.day6();
+        administratorTwentyTwentyOne.day7();
+        administratorTwentyTwentyOne.day9();
     }
 }

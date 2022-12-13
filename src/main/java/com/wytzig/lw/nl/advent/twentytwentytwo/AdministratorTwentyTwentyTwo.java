@@ -1,10 +1,19 @@
 package com.wytzig.lw.nl.advent.twentytwentytwo;
 
+import com.wytzig.lw.nl.advent.Day;
+import com.wytzig.lw.nl.advent.twentytwentytwo.campcleaning.DayFour;
 import com.wytzig.lw.nl.advent.twentytwentytwo.elvescalories.DayOne;
 import com.wytzig.lw.nl.advent.twentytwentytwo.rockpaperscissors.DayTwo;
 import com.wytzig.lw.nl.advent.twentytwentytwo.rucksackCheck.DayThree;
 
 public class AdministratorTwentyTwentyTwo {
+
+
+    public void day4() {
+        DayFour executable = new DayFour();
+        executable.getAnswerFromExample();
+        executable.getAnswerForQuestion();
+    }
 
     public void day3() {
         DayThree executable = new DayThree();
