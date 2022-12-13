@@ -78,7 +78,7 @@ public class DayFour implements Day {
     @Override
     public boolean getAnswerForQuestion() {
         processInput("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day4_question");
-        return false;
+        return true;
     }
 
     @Override
