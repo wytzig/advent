@@ -28,7 +28,8 @@ public class AdventApplication {
 //        administratorTwentyTwentyTwo.day2();
 //        administratorTwentyTwentyTwo.day3();
 //        administratorTwentyTwentyTwo.day4();
-        administratorTwentyTwentyTwo.day5();
+//        administratorTwentyTwentyTwo.day5();
+        administratorTwentyTwentyTwo.day6();
     }
 
     public void TheYear2021() {

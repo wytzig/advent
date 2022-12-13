@@ -1,6 +1,7 @@
 package com.wytzig.lw.nl.advent.twentytwentytwo;
 
 import com.wytzig.lw.nl.advent.twentytwentytwo.campcleaning.DayFour;
+import com.wytzig.lw.nl.advent.twentytwentytwo.communicationdevice.DaySix;
 import com.wytzig.lw.nl.advent.twentytwentytwo.elvescalories.DayOne;
 import com.wytzig.lw.nl.advent.twentytwentytwo.rockpaperscissors.DayTwo;
 import com.wytzig.lw.nl.advent.twentytwentytwo.rucksackCheck.DayThree;
@@ -8,6 +9,12 @@ import com.wytzig.lw.nl.advent.twentytwentytwo.stackingsnacks.DayFive;
 
 public class AdministratorTwentyTwentyTwo {
 
+
+    public void day6() {
+        DaySix executable = new DaySix();
+        executable.getAnswerFromExample();
+        executable.getAnswerForQuestion();
+    }
 
     public void day5() {
         DayFive executable = new DayFive();
