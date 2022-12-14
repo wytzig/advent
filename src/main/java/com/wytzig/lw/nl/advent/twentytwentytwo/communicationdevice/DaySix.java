@@ -10,14 +10,13 @@ public class DaySix implements Day {
     private void processStringAsStream(String datastreamBuffer, boolean packageMarker) {
         char[] inputCharacterList = datastreamBuffer.toCharArray();
 
-        for(int i = 0; i < inputCharacterList.length; i++) {
+        for (int i = 0; i < inputCharacterList.length; i++) {
             this.tempMarker += inputCharacterList[i];
 
-            if(packageMarker) {
-                if(checkMarker(4, i)) return;
-            }
-            else {
-                if(checkMarker(14, i)) return;
+            if (packageMarker) {
+                if (checkMarker(4, i)) return;
+            } else {
+                if (checkMarker(14, i)) return;
             }
         }
     }
@@ -29,13 +28,13 @@ public class DaySix implements Day {
     private String tempMarker = "";
 
     private boolean checkMarker(int markerLength, int currentPosition) {
-        if(this.tempMarker.length() >= markerLength) { // we need to check the marker
-            if(isValidMarker(this.tempMarker)) {
-                System.out.println("hooraayyy we have a marker: " + this.tempMarker+ ". This occurred after: " + (currentPosition + 1) + " char checks");
+        if (this.tempMarker.length() >= markerLength) { // we need to check the marker
+            if (isValidMarker(this.tempMarker)) {
+                System.out.println("hooraayyy we have a marker: " + this.tempMarker + ". This occurred after: " + (currentPosition + 1) + " char checks");
                 return true; // we have found a marker
             }
         }
-        if(this.tempMarker.length() == markerLength) { // remove first char
+        if (this.tempMarker.length() == markerLength) { // remove first char
             this.tempMarker = this.tempMarker.substring(1);
         }
         return false;
@@ -43,36 +42,27 @@ public class DaySix implements Day {
 
     /**
      * A marker is a string of 4 characters that has no repeating letters
+     *
      * @param possibleMarker
      * @return
      */
     private boolean isValidMarker(String possibleMarker) {
         assert possibleMarker != null || !possibleMarker.isEmpty() || !possibleMarker.isBlank();
 
-        boolean result = false;
+        boolean result = true;
 
-        try {
-            for(int i = 0; i <= possibleMarker.length(); i++) {
-                Matcher matcher= Pattern.compile(possibleMarker.charAt(i) + "").matcher(possibleMarker.substring(i + 1));
-                int count = 0;
+        for (int i = 0; i <= possibleMarker.length() - 1; i++) {
+            Matcher matcher = Pattern.compile(possibleMarker.charAt(i) + "").matcher(possibleMarker.substring(i + 1));
+            int count = 0;
 
-                while (matcher.find()) {
-                    count++;
-                }
-                if(count == 0) {
-                    result = true; // sure but also check next...
-                }
-                if(count == 1) { // there were multiple occurrences!
-                    result = false;
-                    return result;
-                }
+            while (matcher.find()) {
+                count++;
             }
-            return result;
-        } catch (IndexOutOfBoundsException e) {
-//            System.out.println("Silently fail overflow exception: " + e);
-        } finally {
-            return result;
+            if (count == 1) { // there were multiple occurrences!
+                return false;
+            }
         }
+        return result;
     }
 
     @Override
