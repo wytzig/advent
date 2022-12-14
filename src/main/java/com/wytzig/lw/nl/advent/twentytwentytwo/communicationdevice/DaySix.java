@@ -10,33 +10,36 @@ public class DaySix implements Day {
     private void processStringAsStream(String datastreamBuffer, boolean packageMarker) {
         char[] inputCharacterList = datastreamBuffer.toCharArray();
 
-        String tempMarkerBuilder = "";
         for(int i = 0; i < inputCharacterList.length; i++) {
-            tempMarkerBuilder += inputCharacterList[i];
+            this.tempMarker += inputCharacterList[i];
             if(packageMarker) {
-                if(tempMarkerBuilder.length() >= 4) { // we need to check the marker
-                    if(isValidMarker(tempMarkerBuilder)) {
-                        System.out.println("hooraayyy we have a marker: " + tempMarkerBuilder + ". This occurred after: " + (i + 1) + " char checks");
+                if(this.tempMarker.length() >= 4) { // we need to check the marker
+                    if(isValidMarker(this.tempMarker)) {
+                        System.out.println("hooraayyy we have a marker: " + this.tempMarker + ". This occurred after: " + (i + 1) + " char checks");
                         return;
                     }
                 }
-                if(tempMarkerBuilder.length() == 4) { // remove first char
-                    tempMarkerBuilder = tempMarkerBuilder.substring(1);
+                if(this.tempMarker.length() == 4) { // remove first char
+                    this.tempMarker = this.tempMarker.substring(1);
                 }
             }
             else {
-                if(tempMarkerBuilder.length() >= 14) { // we need to check the marker
-                    if(isValidMarker(tempMarkerBuilder)) {
-                        System.out.println("hooraayyy we have a marker: " + tempMarkerBuilder + ". This occurred after: " + (i + 1) + " char checks");
-                        return;
-                    }
-                }
-                if(tempMarkerBuilder.length() == 14) { // remove first char
-                    tempMarkerBuilder = tempMarkerBuilder.substring(1);
-                }
+                checkMarker(14, tempMarker, i);
             }
+        }
+    }
 
+    private String tempMarker = "";
 
+    private void checkMarker(int markerLength, String marker, int currentPosition) {
+        if(marker.length() >= markerLength) { // we need to check the marker
+            if(isValidMarker(marker)) {
+                System.out.println("hooraayyy we have a marker: " + marker + ". This occurred after: " + (currentPosition + 1) + " char checks");
+                return;
+            }
+        }
+        if(marker.length() == 14) { // remove first char
+            this.tempMarker = marker.substring(1);
         }
     }
 
