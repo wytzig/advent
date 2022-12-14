@@ -16,9 +16,9 @@ public class DaySix implements Day {
             this.tempMarker += inputCharacterList[i];
 
             if (packageMarker) {
-                if (checkMarker(4, i)) return;
+                if (checkMarker(4, i)) return; //package
             } else {
-                if (checkMarker(14, i)) return;
+                if (checkMarker(14, i)) return; //message
             }
         }
     }
@@ -38,10 +38,10 @@ public class DaySix implements Day {
     }
 
     /**
-     * A marker is a string of 4 characters that has no repeating letters
+     * A package marker is a string of 4 characters that has no repeating letters
+     * A message marker is a string of 14 characters that has no repeating letters
      *
      * @param possibleMarker
-     * @return
      */
     private boolean isValidMarker(String possibleMarker) {
         assert possibleMarker != null || !possibleMarker.isEmpty() || !possibleMarker.isBlank();
