@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class DayNine implements Day {
+public class DayNine extends Day {
 
     private List<String> heatmapRows = new ArrayList<>();
     private long[][] heatmap = null;

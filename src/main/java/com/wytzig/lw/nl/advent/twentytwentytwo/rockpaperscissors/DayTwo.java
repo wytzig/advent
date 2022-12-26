@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class DayTwo implements Day {
+public class DayTwo extends Day {
 
     List<String[]> strategyGuide = new ArrayList<>();
 

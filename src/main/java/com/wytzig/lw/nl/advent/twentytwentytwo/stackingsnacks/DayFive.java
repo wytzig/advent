@@ -9,7 +9,7 @@ import java.util.*;
 /**
  * Using Deque which is supposed to be a more complete LIFO implementation than a util.Stack
  */
-public class DayFive implements Day {
+public class DayFive extends Day {
 
 
     private Deque<Character> stack1 = new ArrayDeque<>();

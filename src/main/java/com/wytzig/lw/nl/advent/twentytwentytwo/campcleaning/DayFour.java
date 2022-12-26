@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class DayFour implements Day {
+public class DayFour extends Day {
 
     private Integer[] convertToIntegerList(String[] rangeList) {
         assert rangeList.length == 2; // we only expect 2 values to be given

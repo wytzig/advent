@@ -18,7 +18,7 @@ import java.util.Scanner;
  *
  * "Burak" diary: machines broken, sky is dark. Soon we will all be dead.
  */
-public class DayOneTwo implements Day {
+public class DayOneTwo extends Day {
 
     private File day1Input = null;
 

@@ -8,9 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AdventApplication {
 
-    AdministratorTwentyTwentyOne administratorTwentyTwentyOne;
-    AdministratorTwentyTwentyTwo administratorTwentyTwentyTwo;
-
     public static void main(String[] args) {
         SpringApplication.run(AdventApplication.class, args);
         AdventApplication apl = new AdventApplication();
@@ -23,17 +20,17 @@ public class AdventApplication {
     }
 
     public void TheYear2022() {
-        this.administratorTwentyTwentyTwo = new AdministratorTwentyTwentyTwo();
-//        administratorTwentyTwentyTwo.day1();
-//        administratorTwentyTwentyTwo.day2();
-//        administratorTwentyTwentyTwo.day3();
-//        administratorTwentyTwentyTwo.day4();
-//        administratorTwentyTwentyTwo.day5();
+        AdministratorTwentyTwentyTwo administratorTwentyTwentyTwo = new AdministratorTwentyTwentyTwo();
+        administratorTwentyTwentyTwo.day1();
+        administratorTwentyTwentyTwo.day2();
+        administratorTwentyTwentyTwo.day3();
+        administratorTwentyTwentyTwo.day4();
+        administratorTwentyTwentyTwo.day5();
         administratorTwentyTwentyTwo.day6();
     }
 
     public void TheYear2021() {
-        administratorTwentyTwentyOne = new AdministratorTwentyTwentyOne();
+        AdministratorTwentyTwentyOne administratorTwentyTwentyOne = new AdministratorTwentyTwentyOne();
         administratorTwentyTwentyOne.day1();
         administratorTwentyTwentyOne.day2();
         administratorTwentyTwentyOne.day3();

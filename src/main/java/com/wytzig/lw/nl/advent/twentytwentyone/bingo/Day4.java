@@ -11,7 +11,7 @@ import java.util.*;
  * "Captian's diary" : "Win or lose, that thing shall not break the game!
  * yarrr"
  */
-public class Day4 implements Day {
+public class Day4 extends Day {
 
     public ArrayList<Integer> pulledBingoBallsFromExample = new ArrayList<>(
             Arrays.asList(7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1)

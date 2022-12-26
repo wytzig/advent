@@ -5,7 +5,7 @@ import com.wytzig.lw.nl.advent.Day;
 import java.io.File;
 import java.util.*;
 
-public class DayTwo implements Day {
+public class DayTwo extends Day {
 
     private File day2Input = null;
 

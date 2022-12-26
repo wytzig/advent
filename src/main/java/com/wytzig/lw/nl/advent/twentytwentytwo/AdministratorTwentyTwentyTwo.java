@@ -1,5 +1,6 @@
 package com.wytzig.lw.nl.advent.twentytwentytwo;
 
+import com.wytzig.lw.nl.advent.Day;
 import com.wytzig.lw.nl.advent.twentytwentytwo.campcleaning.DayFour;
 import com.wytzig.lw.nl.advent.twentytwentytwo.communicationdevice.DaySix;
 import com.wytzig.lw.nl.advent.twentytwentytwo.elvescalories.DayOne;
@@ -7,8 +8,42 @@ import com.wytzig.lw.nl.advent.twentytwentytwo.rockpaperscissors.DayTwo;
 import com.wytzig.lw.nl.advent.twentytwentytwo.rucksackCheck.DayThree;
 import com.wytzig.lw.nl.advent.twentytwentytwo.stackingsnacks.DayFive;
 
+import java.time.Duration;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.List;
+import java.util.Stack;
+
 public class AdministratorTwentyTwentyTwo {
 
+    protected List<Day> days = new Stack<>();
+
+    // setup days
+    private void init() {
+        this.days.add(new DayOne());
+        this.days.add(new DayTwo());
+        this.days.add(new DayThree());
+        this.days.add(new DayFour());
+        this.days.add(new DayFive());
+        this.days.add(new DaySix());
+    }
+
+    public AdministratorTwentyTwentyTwo() {
+        this.init();
+    }
+
+    public void execute() {
+        for(Day day: this.days) {
+            Instant start = Instant.now();
+            day.doPartOne();
+            day.doPartTwo();
+            Instant finish = Instant.now();
+            long timeElapsed = Duration.between(start, finish).toMillis();
+
+            System.out.println(":: [" + timeElapsed + "]");
+        }
+    }
 
     public void day6() {
         DaySix executable = new DaySix();

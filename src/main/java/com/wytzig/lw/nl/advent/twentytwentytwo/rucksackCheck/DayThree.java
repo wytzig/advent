@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
-public class DayThree implements Day {
+public class DayThree extends Day {
 
     List<String> rucksack = new ArrayList<>();
 

@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class DayOne implements Day {
+public class DayOne extends Day {
 
     List<List<Long>> caloriesPerElf = new ArrayList<>();
     List<Long> sums = new ArrayList<>();
@@ -82,7 +82,7 @@ public class DayOne implements Day {
     @Override
     public boolean getAnswerFromExample() {
         deepclean();
-        parseInput("C:\\Projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day1_example_input");
+        parseInput("src/main/java/com/wytzig/lw/nl/advent/twentytwentytwo/input/day1_example_input");
         getSums();
         System.out.println("The highest sum was: " + getHighest());
         return false;
@@ -91,7 +91,7 @@ public class DayOne implements Day {
     @Override
     public boolean getAnswerForQuestion() {
         deepclean();
-        parseInput("C:\\Projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day1_puzzle_input");
+        parseInput("src/main/java/com/wytzig/lw/nl/advent/twentytwentytwo/input/day1_puzzle_input");
         getSums();
         System.out.println("The highest sum was: " + getHighest());
         return false;
@@ -100,7 +100,7 @@ public class DayOne implements Day {
     @Override
     public boolean getAnswersFromExamplePart2() {
         deepclean();
-        parseInput("C:\\Projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day1_example_input");
+        parseInput("src/main/java/com/wytzig/lw/nl/advent/twentytwentytwo/input/day1_example_input");
         getSums();
         sortList();
         System.out.println("Top three calorie sacks combined equals: " + sumTopThree());
@@ -110,21 +110,27 @@ public class DayOne implements Day {
     @Override
     public boolean getAnswersForQuestionPart2() {
         deepclean();
-        parseInput("C:\\Projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day1_puzzle_input");
+        parseInput("src/main/java/com/wytzig/lw/nl/advent/twentytwentytwo/input/day1_puzzle_input");
         getSums();
         sortList();
         System.out.println("Top three calorie sacks combined equals: " + sumTopThree());
         return false;
     }
 
+    @Override
+    public void doPartOne() {
+        this.getAnswerFromExample();
+        this.getAnswerForQuestion();
+    }
+
     public void hargosInput() {
         deepclean();
-        parseInput("C:\\Projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day1_puzzle_input_hargo");
+        parseInput("src/main/java/com/wytzig/lw/nl/advent/twentytwentytwo/input/day1_puzzle_input_hargo");
         getSums();
         System.out.println("The highest sum was: " + getHighest());
 
         deepclean();
-        parseInput("C:\\Projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day1_puzzle_input_hargo");
+        parseInput("src/main/java/com/wytzig/lw/nl/advent/twentytwentytwo/input/day1_puzzle_input_hargo");
         getSums();
         sortList();
         System.out.println("Top three calorie sacks combined equals: " + sumTopThree());

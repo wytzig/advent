@@ -5,7 +5,7 @@ import com.wytzig.lw.nl.advent.Day;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DaySix implements Day {
+public class DaySix extends Day {
 
     private String tempMarker = "";
 

@@ -32,7 +32,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Kind regards, your captain.
  *
  */
-public class DayThree implements Day {
+public class DayThree extends Day {
 
     private List<String> exampleDiagnosticInput = List.of("00100", "11110", "10110", "10111", "101001",
     "01111", "00111", "11100","10000","11001", "00010","01010");
