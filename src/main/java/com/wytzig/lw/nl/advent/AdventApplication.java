@@ -15,29 +15,21 @@ public class AdventApplication {
     }
 
     public void run() {
-//        TheYear2021();
+        TheYear2021();
         TheYear2022();
     }
 
     public void TheYear2022() {
+        System.out.println("Starting 2022..");
         AdministratorTwentyTwentyTwo administratorTwentyTwentyTwo = new AdministratorTwentyTwentyTwo();
-        administratorTwentyTwentyTwo.day1();
-        administratorTwentyTwentyTwo.day2();
-        administratorTwentyTwentyTwo.day3();
-        administratorTwentyTwentyTwo.day4();
-        administratorTwentyTwentyTwo.day5();
-        administratorTwentyTwentyTwo.day6();
+        administratorTwentyTwentyTwo.execute();
+        System.out.println("Ending 2022..");
     }
 
     public void TheYear2021() {
+        System.out.println("Starting 2021..");
         AdministratorTwentyTwentyOne administratorTwentyTwentyOne = new AdministratorTwentyTwentyOne();
-        administratorTwentyTwentyOne.day1();
-        administratorTwentyTwentyOne.day2();
-        administratorTwentyTwentyOne.day3();
-        administratorTwentyTwentyOne.day4();
-
-        administratorTwentyTwentyOne.day6();
-        administratorTwentyTwentyOne.day7();
-        administratorTwentyTwentyOne.day9();
+        administratorTwentyTwentyOne.execute();
+        System.out.println("Ending 2021..");
     }
 }
