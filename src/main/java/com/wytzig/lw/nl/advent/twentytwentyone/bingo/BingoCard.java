@@ -57,6 +57,7 @@ public class BingoCard {
         return result * lastCalledNumber;
     }
 
+    /**@return true if we have bingo, false otherwise   */
     private boolean checkForBingo() {
         int rowSucces = 0;
         int columnSucces = 0;

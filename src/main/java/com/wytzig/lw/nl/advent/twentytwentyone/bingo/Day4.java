@@ -141,8 +141,8 @@ public class Day4 extends Day {
                         Integer[] inputList = tempList.toArray(new Integer[5]); // create inputListForBingoCard
                         tempCard.initInitialBingoCard(inputList); // set tempCard
                         question_bingoCards.add(this.tempCard); // add tempcard as new BingoCard
-                        System.out.println("initialized card " + this.tempCard.name + ", with data: ");
-                        tempCard.prettyPrintInitialCard();
+//                        System.out.println("initialized card " + this.tempCard.name + ", with data: ");
+//                        tempCard.prettyPrintInitialCard();
                     }
 
                     this.tempCard = new BingoCard(name); // create new tempcard & flush tempCard
@@ -193,7 +193,7 @@ public class Day4 extends Day {
                 6, 10, 3, 18, 5, 1,
                 12, 20, 15, 19);
         System.out.println("printing card 1: ");
-        card1.prettyPrintInitialCard();
+//        card1.prettyPrintInitialCard();
 
         card2 = new BingoCard("card2");
         card2.initInitialBingoCard(
@@ -202,7 +202,7 @@ public class Day4 extends Day {
                 19,  8,  7, 25, 23,
                 20, 11, 10, 24,  4,
                 14, 21, 16, 12,  6);
-        card2.prettyPrintInitialCard();
+//        card2.prettyPrintInitialCard();
 
         card3 = new BingoCard("card3");
         card3.initInitialBingoCard(
@@ -211,7 +211,7 @@ public class Day4 extends Day {
                 18,  8, 23, 26, 20,
                 22, 11, 13, 6, 5,
                 2 , 0, 12, 3, 7);
-        card3.prettyPrintInitialCard();
+//        card3.prettyPrintInitialCard();
         System.out.println("---- Finished initializing ----");
     }
 }

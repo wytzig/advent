@@ -26,7 +26,7 @@ public class DaySix extends Day {
     private boolean checkMarker(int markerLength, int currentPosition) {
         if (this.tempMarker.length() >= markerLength) { // we need to check the marker
             if (isValidMarker(this.tempMarker)) {
-                System.out.println("hooraayyy we have a marker: " + this.tempMarker + ". This occurred after: " + (currentPosition + 1) + " char checks");
+//                System.out.println("hooraayyy we have a marker: " + this.tempMarker + ". This occurred after: " + (currentPosition + 1) + " char checks");
                 this.tempMarker = ""; // clean global var
                 return true; // we have found a marker
             }

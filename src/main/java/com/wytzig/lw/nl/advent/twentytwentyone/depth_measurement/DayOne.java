@@ -55,7 +55,7 @@ public class DayOne extends Day {
             }
             prevLine = line;
         }
-        System.out.println("total-counter is: " + totalCounter);
+//        System.out.println("total-counter is: " + totalCounter);
         return counter;
     }
 
@@ -67,7 +67,7 @@ public class DayOne extends Day {
     private boolean processIOFile() {
         try {
             Scanner scanner = new Scanner(this.day1Input);
-            System.out.println("scanner successfully started..");
+//            System.out.println("scanner successfully started..");
 
             System.out.println("the answer is: " + computeFromList(scanner));
 

@@ -118,7 +118,7 @@ public class DayOneTwo extends Day {
     private boolean processIOFile() {
         try {
             Scanner scanner = new Scanner(this.day1Input);
-            System.out.println("scanner successfully started..");
+//            System.out.println("scanner successfully started..");
             computeFromInput(scanner);
 
         } catch (FileNotFoundException e) {
@@ -147,7 +147,7 @@ public class DayOneTwo extends Day {
     public List<String> computeFromText(File input) {
         try {
             Scanner scanner = new Scanner(input);
-            System.out.println("scanner successfully started..");
+//            System.out.println("scanner successfully started..");
             return computeFromInput(scanner);
 
         } catch (FileNotFoundException e) {

@@ -94,13 +94,13 @@ public class DayNine extends Day {
                 long under = getLocation(Positions.DOWN, i, j);
 
                 if(isLower(location, left) && isLower(location, right) && isLower(location, upper) && isLower(location, under)) {
-                    System.out.println("low point detected: " + location);
+//                    System.out.println("low point detected: " + location);
                     this.listOfLowPoints.add(location);
                 }
 
-                System.out.println("the current number is: " + location + ". left: " + left + ". right: " + right + ". up: " + upper + ". under: "+ under);
+//                System.out.println("the current number is: " + location + ". left: " + left + ". right: " + right + ". up: " + upper + ". under: "+ under);
             }
-            System.out.println("\n");
+//            System.out.println("\n");
         }
     }
     private List<Long> basins = new ArrayList<>();

@@ -29,7 +29,7 @@ public abstract class Administrator {
             Instant finish = Instant.now();
             long timeElapsed = Duration.between(start, finish).toMillis();
 
-            System.out.println("::" + timeElapsed + " [ms]");
+            System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t::" + timeElapsed + " [ms]");
         }
     }
 }
