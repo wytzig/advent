@@ -25,9 +25,9 @@ public class DayTwo extends Day {
     }
 
     private void initializeSimpleTest(File inputFile) {
-        System.out.println("clean-up");
+//        System.out.println("clean-up");
         this.day2Input = null;
-        System.out.println("Initializing test data..");
+//        System.out.println("Initializing test data..");
         this.day2Input = inputFile;
         try {
             Scanner sc = new Scanner(this.day2Input);
@@ -41,12 +41,12 @@ public class DayTwo extends Day {
             System.out.println("input file not found! With exception: " + e);
         }
         finally {
-            System.out.println("done");
+//            System.out.println("done");
         }
     }
 
     private void initializeComplexTest(File inputFile) {
-        System.out.println("Initializing test data..");
+//        System.out.println("Initializing test data..");
         this.day2Input = inputFile;
         try {
             Scanner sc = new Scanner(this.day2Input);
@@ -60,14 +60,14 @@ public class DayTwo extends Day {
             System.out.println("input file not found! With exception: " + e);
         }
         finally {
-            System.out.println("done");
+//            System.out.println("done");
         }
     }
 
     @Override
     public boolean getAnswerForQuestion() {
         cleanup();
-        System.out.println("Initializing data..");
+//        System.out.println("Initializing data..");
         initializeSimpleTest(new File("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentyone\\input_files\\day2_question_input.txt"));
 
         this.PSR.prettyPrint();
@@ -87,10 +87,10 @@ public class DayTwo extends Day {
     }
 
     private void cleanup() {
-        System.out.println("clean-up");
+//        System.out.println("clean-up");
         this.day2Input = null;
         this.PSR = new PositioningSystem(0, 0, 0);
-        System.out.println("done");
+//        System.out.println("done");
     }
 
     @Override
@@ -103,5 +103,10 @@ public class DayTwo extends Day {
         PSR.prettyPrint();
 
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return setDayName("day 2");
     }
 }

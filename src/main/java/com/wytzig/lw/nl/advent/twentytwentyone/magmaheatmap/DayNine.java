@@ -10,6 +10,11 @@ import java.util.Scanner;
 
 public class DayNine extends Day {
 
+    @Override
+    public void setDayName(String dayName) {
+        super.setDayName("day 9");
+    }
+
     private List<String> heatmapRows = new ArrayList<>();
     private long[][] heatmap = null;
 
@@ -157,11 +162,11 @@ public class DayNine extends Day {
                 long under = getLocation(Positions.DOWN, i, j);
 
                 if(isLower(location, left) && isLower(location, right) && isLower(location, upper) && isLower(location, under)) {
-                    System.out.println("low point detected: " + location);
+//                    System.out.println("low point detected: " + location);
                     createBasing(location, i, j);
                 }
 
-                System.out.println("the current number is: " + location + ". left: " + left + ". right: " + right + ". up: " + upper + ". under: "+ under);
+//                System.out.println("the current number is: " + location + ". left: " + left + ". right: " + right + ". up: " + upper + ". under: "+ under);
             }
             System.out.println("\n");
         }
@@ -172,7 +177,7 @@ public class DayNine extends Day {
         for(long location: listOfLowPoints) {
             sum += (location + 1);
         }
-        System.out.println("The sum of all risk points is: " + sum);
+//        System.out.println("The sum of all risk points is: " + sum);
         return sum;
     }
 

@@ -23,7 +23,7 @@ public class BingoCard {
             boolean result = callNumberAndCheckForBingo(calledNumber);
             if(result) {
                 this.finalScore = calculateScore(calledNumber);
-                System.out.println("We have bingo for card: " + name);
+//                System.out.println("We have bingo for card: " + name);
 //                System.out.println("Score is: " + finalScore);
 //                System.out.print("last pulled number was: " + calledNumber);
             }

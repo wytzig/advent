@@ -50,7 +50,7 @@ public class PositioningSystem {
     }
 
     public void prettyPrint() {
-        System.out.println("Our current horizontal(x) position is: " + x + " and our depth(y) is: " + y);
-        System.out.println("positioning multiplication is: " + (x * y));
+//        System.out.println("Our current horizontal(x) position is: " + x + " and our depth(y) is: " + y);
+//        System.out.println("positioning multiplication is: " + (x * y));
     }
 }

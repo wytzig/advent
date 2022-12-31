@@ -20,6 +20,11 @@ import java.util.Scanner;
  */
 public class DayOneTwo extends Day {
 
+    @Override
+    public void setDayName(String dayName) {
+        super.setDayName("day 1 part 2");
+    }
+
     private File day1Input = null;
 
     private static final List<Integer> day1_data_input_depth_measurement = List.
@@ -70,21 +75,21 @@ public class DayOneTwo extends Day {
 
         filteredInputListOfDepthMeasurementsExample = computeFilteredThreeMeasureDataFromInputList(day1_data_input_depth_measurement);
         filteredInputListOfDepthMeasurements = computeFilteredThreeMeasureDataFromInputList(inputListOfDepthMeasurements);
-        System.out.println("[example] List of calculated sums: " + computeFilteredThreeMeasureDataFromInputList(day1_data_input_depth_measurement));
-        System.out.println("List of calculated sums: " + computeFilteredThreeMeasureDataFromInputList(inputListOfDepthMeasurements));
+//        System.out.println("[example] List of calculated sums: " + computeFilteredThreeMeasureDataFromInputList(day1_data_input_depth_measurement));
+//        System.out.println("List of calculated sums: " + computeFilteredThreeMeasureDataFromInputList(inputListOfDepthMeasurements));
 
         int amountOfIncreasesExample = amountOfIncreasesForList(filteredInputListOfDepthMeasurementsExample);
         int amountOfIncreases = amountOfIncreasesForList(filteredInputListOfDepthMeasurements);
 
 //        System.out.println("first average [example]:" + filteredInputListOfDepthMeasurementsExample.get(0));
 //        System.out.println("first average :" + filteredInputListOfDepthMeasurements.get(0));
-        System.out.println("total amount of depth measurements [unfiltered] is: " + amountOfDepbtMeasurements);
-        System.out.println("[example] total amount of depth measurements [filtered] is: " + filteredInputListOfDepthMeasurementsExample);
-        System.out.println("Amount of increases in three-measure sums[]: " + amountOfIncreasesExample);
-        System.out.println("isTrueToExample?: " + (amountOfIncreasesExample == 5));
-        System.out.println("answer to question?: " + (amountOfIncreases));
-        System.out.println("total amount of depth measurements [filtered] is: " + filteredInputListOfDepthMeasurements);
-        System.out.println("total amount of filtered three-measures increased: " + amountOfIncreases);
+//        System.out.println("total amount of depth measurements [unfiltered] is: " + amountOfDepbtMeasurements);
+//        System.out.println("[example] total amount of depth measurements [filtered] is: " + filteredInputListOfDepthMeasurementsExample);
+//        System.out.println("Amount of increases in three-measure sums[]: " + amountOfIncreasesExample);
+//        System.out.println("isTrueToExample?: " + (amountOfIncreasesExample == 5));
+//        System.out.println("answer to question?: " + (amountOfIncreases));
+//        System.out.println("total amount of depth measurements [filtered] is: " + filteredInputListOfDepthMeasurements);
+//        System.out.println("total amount of filtered three-measures increased: " + amountOfIncreases);
 
         return List.of("1","2"); //spoof for future compatibility
     }

@@ -13,6 +13,7 @@ import java.util.*;
  */
 public class Day4 extends Day {
 
+
     public ArrayList<Integer> pulledBingoBallsFromExample = new ArrayList<>(
             Arrays.asList(7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1)
     );
@@ -45,7 +46,7 @@ public class Day4 extends Day {
                 return true;
             }
         }
-        System.out.println("\n\n there was no bingo :(");
+//        System.out.println("\n\n there was no bingo :(");
         return false; // no bingo :(
     }
 
@@ -58,7 +59,7 @@ public class Day4 extends Day {
                 if(card.callNumberCheckBingoAndReturnScore(number)) return true;
             }
         }
-        System.out.println("\n\n there was no bingo :(");
+//        System.out.println("\n\n there was no bingo :(");
         return false;
     }
 
@@ -72,14 +73,20 @@ public class Day4 extends Day {
         return false;
     }
 
+    @Override
+    public String toString() {
+        setDayName("Day 4");
+        return null;
+    }
+
     public boolean getAnswerPartTwoExample() {
         filled_bingo_cards = new ArrayList<>(); // flush just in case
         initBingoCardsFromExample();
         List<BingoCard> listOfBingoCards = new ArrayList<>(List.of(card1, card2, card3));
         ArrayList<BingoCard> cardsToSkip = new ArrayList<>();
 
-        System.out.println("The amount of input numbers are: " + pulledBingoBallsFromExample.size());
-        System.out.println("The amount of bingo cards are: " + listOfBingoCards.size());
+//        System.out.println("The amount of input numbers are: " + pulledBingoBallsFromExample.size());
+//        System.out.println("The amount of bingo cards are: " + listOfBingoCards.size());
         for(int number: pulledBingoBallsFromExample) { // process all numbers
             for(BingoCard card: listOfBingoCards) { // for all known bingo cards
                 if(listOfBingoCards.size() != cardsToSkip.size()) { // only process new numbers as not every card has a bingo
@@ -92,9 +99,9 @@ public class Day4 extends Day {
         }
 
         BingoCard lastCard = filled_bingo_cards.get(filled_bingo_cards.size() - 1);
-        System.out.println("The amount of bingos were: " + filled_bingo_cards.size());
-        System.out.println("The last bingo was: " + lastCard.name);
-        System.out.println("And it's score would be: " + lastCard.finalScore);
+//        System.out.println("The amount of bingos were: " + filled_bingo_cards.size());
+//        System.out.println("The last bingo was: " + lastCard.name);
+//        System.out.println("And it's score would be: " + lastCard.finalScore);
 
         return false; // no bingo :(
     }
@@ -116,10 +123,10 @@ public class Day4 extends Day {
             }
         }
         BingoCard lastCard = filled_bingo_cards.get(filled_bingo_cards.size() - 1);
-        System.out.println("The amount of inputCards were: " + question_bingoCards.size());
-        System.out.println("The amount of bingos were: " + filled_bingo_cards.size());
-        System.out.println("The last bingo was: " + lastCard.name);
-        System.out.println("And it's score would be: " + lastCard.finalScore);
+//        System.out.println("The amount of inputCards were: " + question_bingoCards.size());
+//        System.out.println("The amount of bingos were: " + filled_bingo_cards.size());
+//        System.out.println("The last bingo was: " + lastCard.name);
+//        System.out.println("And it's score would be: " + lastCard.finalScore);
 
         return false; // no bingo :(
     }
@@ -184,7 +191,7 @@ public class Day4 extends Day {
     }
 
     public void initBingoCardsFromExample() {
-        System.out.println("---- Initializing bingo cards for example ----");
+//        System.out.println("---- Initializing bingo cards for example ----");
         card1 = new BingoCard("card1");
         card1.initInitialBingoCard(
                 22, 13, 17, 11, 0,
@@ -192,7 +199,7 @@ public class Day4 extends Day {
                 21, 9, 14, 16,  7,
                 6, 10, 3, 18, 5, 1,
                 12, 20, 15, 19);
-        System.out.println("printing card 1: ");
+//        System.out.println("printing card 1: ");
 //        card1.prettyPrintInitialCard();
 
         card2 = new BingoCard("card2");
@@ -212,6 +219,6 @@ public class Day4 extends Day {
                 22, 11, 13, 6, 5,
                 2 , 0, 12, 3, 7);
 //        card3.prettyPrintInitialCard();
-        System.out.println("---- Finished initializing ----");
+//        System.out.println("---- Finished initializing ----");
     }
 }

@@ -127,7 +127,7 @@ public class DayThree extends Day {
     @Override
     public boolean getAnswerFromExample() {
         processInput("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day3_puzzle_example");
-        System.out.println("Sum of priorities of item types: " + processRuckSack());
+//        System.out.println("Sum of priorities of item types: " + processRuckSack());
         this.rucksack = new ArrayList<>();
         return true;
     }
@@ -135,7 +135,7 @@ public class DayThree extends Day {
     @Override
     public boolean getAnswerForQuestion() {
         processInput("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day3_puzzle_question");
-        System.out.println("Sum of priorities of item types: " + processRuckSack());
+//        System.out.println("Sum of priorities of item types: " + processRuckSack());
         this.rucksack = new ArrayList<>();
         return false;
     }
@@ -143,7 +143,7 @@ public class DayThree extends Day {
     @Override
     public boolean getAnswersFromExamplePart2() {
         processInput("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day3_puzzle_example");
-        System.out.println("Sum of priorities of item types: " + findBadgesScore());
+//        System.out.println("Sum of priorities of item types: " + findBadgesScore());
         this.rucksack = new ArrayList<>();
         return false;
     }
@@ -151,7 +151,7 @@ public class DayThree extends Day {
     @Override
     public boolean getAnswersForQuestionPart2() {
         processInput("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day3_puzzle_question");
-        System.out.println("Sum of priorities of item types: " + findBadgesScore());
+//        System.out.println("Sum of priorities of item types: " + findBadgesScore());
         return false;
     }
 }

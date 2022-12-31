@@ -2,6 +2,7 @@ package com.wytzig.lw.nl.advent;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
@@ -29,7 +30,7 @@ public abstract class Administrator {
             Instant finish = Instant.now();
             long timeElapsed = Duration.between(start, finish).toMillis();
 
-            System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t::" + timeElapsed + " [ms]");
+            System.out.println("another one bites the dust: " + day.toString() + "\t\t\t\tTime:" + timeElapsed + " [ms]");
         }
     }
 }

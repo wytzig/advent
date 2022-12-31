@@ -44,8 +44,8 @@ public class DayFour extends Day {
         } catch (FileNotFoundException e) {
             System.out.println("ERROR while processing the file: " + e);
         } finally {
-            System.out.println("The amount of containing ranges was: " + amountOfContainingRanges);
-            System.out.println("The amount of overlapping ranges was: " + amountOfOverlappingRanges);
+//            System.out.println("The amount of containing ranges was: " + amountOfContainingRanges);
+//            System.out.println("The amount of overlapping ranges was: " + amountOfOverlappingRanges);
         }
     }
 

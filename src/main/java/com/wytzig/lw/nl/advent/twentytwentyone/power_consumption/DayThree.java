@@ -34,6 +34,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class DayThree extends Day {
 
+    @Override
+    public void setDayName(String dayName) {
+        super.setDayName("Day 3");
+    }
+
     private List<String> exampleDiagnosticInput = List.of("00100", "11110", "10110", "10111", "101001",
     "01111", "00111", "11100","10000","11001", "00010","01010");
 
@@ -70,20 +75,20 @@ public class DayThree extends Day {
         // get scanner for processing file
         try {
             Scanner s = initInput();
-            System.out.println("Scanner boot :: successful");
+//            System.out.println("Scanner boot :: successful");
 
             List<String> fileInput = new LinkedList<>();
             while (s.hasNextLine()) {
                 fileInput.add(s.next());
             }
-            System.out.println("fileInput was: " + fileInput);
+//            System.out.println("fileInput was: " + fileInput);
             getAnswer(fileInput);
 
-            System.out.println("the gamma is: " + bitGammaRate);
-            System.out.println("the gamma-decimal is: " + this.gammaDecimal);
-            System.out.println("the epsilon is: " + bitEpsilonRate);
-            System.out.println("the epsilon-decimal is: " + this.epsilonDecimal );
-            System.out.println("the power consumption is: " + this.powerConsumption );
+//            System.out.println("the gamma is: " + bitGammaRate);
+//            System.out.println("the gamma-decimal is: " + this.gammaDecimal);
+//            System.out.println("the epsilon is: " + bitEpsilonRate);
+//            System.out.println("the epsilon-decimal is: " + this.epsilonDecimal );
+//            System.out.println("the power consumption is: " + this.powerConsumption );
 
         } catch (FileNotFoundException e) {
             System.out.println("[error] Something went wrong Matey! See error message:" + e.getMessage());
@@ -103,7 +108,7 @@ public class DayThree extends Day {
 
     public void getAnswer(List<String> usageOfInput) {
         int individualItemLength = usageOfInput.get(0).length();
-        System.out.println("length of individual item is: " + individualItemLength);
+//        System.out.println("length of individual item is: " + individualItemLength);
         for (int i = 0; i <= individualItemLength - 1; i++) { // size of raw digits, based on the first item
             String mostOccurringBit = computeMostOccurringBitForBitArray(getBitstringColumnForPosition(usageOfInput, i));
             String leastOccurringBit = computeLeastOccurringBitForBitArray(getBitstringColumnForPosition(usageOfInput, i));
@@ -122,11 +127,11 @@ public class DayThree extends Day {
         initGlobalVars();
         getAnswer(exampleDiagnosticInput);
 
-        System.out.println("the gamma is: " + bitGammaRate + ".  The answer should have been: " + exampleAnswerBitGammaRate);
-        System.out.println("the gamma-decimal is: " + this.gammaDecimal + ".  The answer should have been: " + exampleAnswerGammaDecimal);
-        System.out.println("the epsilon is: " + bitEpsilonRate + ".  The answer should have been: " + exampleAnswerBitEpsilonRate);
-        System.out.println("the epsilon-decimal is: " + this.epsilonDecimal + ". The answer should have been:" + exampleAnswerEpsilonDecimal);
-        System.out.println("the power consumption is: " + this.powerConsumption + ". And should have been: "+ powerConsumptionAnswer);
+//        System.out.println("the gamma is: " + bitGammaRate + ".  The answer should have been: " + exampleAnswerBitGammaRate);
+//        System.out.println("the gamma-decimal is: " + this.gammaDecimal + ".  The answer should have been: " + exampleAnswerGammaDecimal);
+//        System.out.println("the epsilon is: " + bitEpsilonRate + ".  The answer should have been: " + exampleAnswerBitEpsilonRate);
+//        System.out.println("the epsilon-decimal is: " + this.epsilonDecimal + ". The answer should have been:" + exampleAnswerEpsilonDecimal);
+//        System.out.println("the power consumption is: " + this.powerConsumption + ". And should have been: "+ powerConsumptionAnswer);
 
         return true;
     }

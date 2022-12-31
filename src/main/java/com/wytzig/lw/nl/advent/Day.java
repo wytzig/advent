@@ -45,4 +45,15 @@ public abstract class Day {
         getAnswersFromExamplePart2();
         getAnswersForQuestionPart2();
     }
+
+    public String dayName = "";
+
+    @Override
+    public String toString() {
+        return ":: " + dayName;
+    }
+
+    public void setDayName(String dayName) {
+        this.dayName = dayName;
+    }
 }

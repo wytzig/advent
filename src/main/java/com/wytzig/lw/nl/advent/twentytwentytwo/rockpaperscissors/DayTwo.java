@@ -7,6 +7,11 @@ import java.util.*;
 
 public class DayTwo extends Day {
 
+    @Override
+    public void setDayName(String dayName) {
+        super.setDayName("Day5");
+    }
+
     List<String[]> strategyGuide = new ArrayList<>();
 
     public long processStrategyGuide() {
@@ -162,14 +167,14 @@ public class DayTwo extends Day {
             System.out.println("Error processing input file");
             throw new RuntimeException(e);
         } finally {
-            System.out.println("Finished processing of file");
+//            System.out.println("Finished processing of file");
         }
     }
 
     @Override
     public boolean getAnswerFromExample() {
         processInput("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day2_puzzle_example");
-        System.out.println("Total score was: " + processStrategyGuide());
+//        System.out.println("Total score was: " + processStrategyGuide());
         this.strategyGuide = new ArrayList<>(); // flush global vars
         return true;
     }
@@ -177,7 +182,7 @@ public class DayTwo extends Day {
     @Override
     public boolean getAnswerForQuestion() {
         processInput("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day2_puzzle_question");
-        System.out.println("Total score was: " + processStrategyGuide());
+//        System.out.println("Total score was: " + processStrategyGuide());
         this.strategyGuide = new ArrayList<>();
         return true;
     }
@@ -185,7 +190,7 @@ public class DayTwo extends Day {
     @Override
     public boolean getAnswersFromExamplePart2() {
         processInput("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day2_puzzle_example");
-        System.out.println("Total score was: " + processStrategyGuideForUnknownHand());
+//        System.out.println("Total score was: " + processStrategyGuideForUnknownHand());
         this.strategyGuide = new ArrayList<>();
         return true;
     }
@@ -193,7 +198,7 @@ public class DayTwo extends Day {
     @Override
     public boolean getAnswersForQuestionPart2() {
         processInput("C:\\Users\\Admin\\projects\\advent\\src\\main\\java\\com\\wytzig\\lw\\nl\\advent\\twentytwentytwo\\input\\day2_puzzle_question");
-        System.out.println("Total score was: " + processStrategyGuideForUnknownHand());
+//        System.out.println("Total score was: " + processStrategyGuideForUnknownHand());
         this.strategyGuide = new ArrayList<>();
         return false;
     }

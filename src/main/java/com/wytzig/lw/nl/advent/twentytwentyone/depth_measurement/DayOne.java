@@ -23,6 +23,10 @@ import java.util.Scanner;
  * ~ Your Captain - 2022
  */
 public class DayOne extends Day {
+    @Override
+    public void setDayName(String dayName) {
+        super.setDayName("day 1");
+    }
 
     private static final List<Integer> day1_data_input_depth_measurement = List.
             of(199, 200, 208, 210, 200, 207, 240, 269, 260, 263);
@@ -69,10 +73,10 @@ public class DayOne extends Day {
             Scanner scanner = new Scanner(this.day1Input);
 //            System.out.println("scanner successfully started..");
 
-            System.out.println("the answer is: " + computeFromList(scanner));
+//            System.out.println("the answer is: " + computeFromList(scanner));
 
         } catch (FileNotFoundException e) {
-            System.out.println("could not init scanner: " + e.getMessage());
+//            System.out.println("could not init scanner: " + e.getMessage());
             e.printStackTrace();
         }
         return true;
@@ -113,7 +117,7 @@ public class DayOne extends Day {
                 }
             }
         }
-        System.out.println("the answer of the example is: " + counter);
+//        System.out.println("the answer of the example is: " + counter);
         return counter == answer;
     }
 

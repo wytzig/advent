@@ -10,7 +10,10 @@ import java.util.*;
  * Using Deque which is supposed to be a more complete LIFO implementation than a util.Stack
  */
 public class DayFive extends Day {
-
+    @Override
+    public void setDayName(String dayName) {
+        super.setDayName("Day5");
+    }
 
     private Deque<Character> stack1 = new ArrayDeque<>();
     private Deque<Character> stack2 = new ArrayDeque<>();
@@ -23,9 +26,9 @@ public class DayFive extends Day {
     private Deque<Character> stack9 = new ArrayDeque<>();
 
     private void prettyPrintFirst() {
-        System.out.println("on top of every stack: " + stack1.peekLast() + stack2.peekLast() + stack3.peekLast() +
-                stack4.peekLast() + stack5.peekLast() + stack6.peekLast() + stack7.peekLast() + stack8.peekLast() +
-                stack9.peekLast());
+//        System.out.println("on top of every stack: " + stack1.peekLast() + stack2.peekLast() + stack3.peekLast() +
+//                stack4.peekLast() + stack5.peekLast() + stack6.peekLast() + stack7.peekLast() + stack8.peekLast() +
+//                stack9.peekLast());
     }
     public void setupExample() {
         stack1.add('Z');
