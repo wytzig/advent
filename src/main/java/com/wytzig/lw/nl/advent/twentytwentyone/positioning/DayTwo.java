@@ -104,9 +104,4 @@ public class DayTwo extends Day {
 
         return false;
     }
-
-    @Override
-    public String toString() {
-        return setDayName("day 2");
-    }
 }
