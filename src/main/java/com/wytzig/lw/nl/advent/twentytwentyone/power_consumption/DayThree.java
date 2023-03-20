@@ -34,6 +34,13 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class DayThree extends Day {
 
+<<<<<<< Updated upstream
+=======
+    @Override
+    public void setDayName(String dayName) {
+        super.setDayName("Day 3");
+    }
+>>>>>>> Stashed changes
     private List<String> exampleDiagnosticInput = List.of("00100", "11110", "10110", "10111", "101001",
     "01111", "00111", "11100","10000","11001", "00010","01010");
 
